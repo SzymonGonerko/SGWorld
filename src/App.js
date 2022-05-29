@@ -11,6 +11,7 @@ import {LeftWall} from "./meshes/LeftWall"
 import {RightWall} from "./meshes/RightWall"
 import {Ceiling} from "./meshes/Ceiling"
 import { TextSkills } from "./meshes/TextSkills"
+import {TextFavouriteThings} from './meshes/TextFavouriteThings'
 
 import LightToTable from "../src/lights/LightToTable"
 import LightToPaint from "../src/lights/LightToPaint"
@@ -47,10 +48,11 @@ export default function App() {
         <Paint />
         
         
-        <MovingPointLight/>
+        {/* <MovingPointLight/> */}
 
-      <LightToTable/>
-      <Table position={[-3, 0, -7]}/>
+        <LightToTable/>
+        <TextFavouriteThings/>
+        <Table position={[-3, 0, -7]}/>
 
         <LightToSkills/>
         <TextSkills />
