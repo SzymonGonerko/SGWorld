@@ -12,6 +12,7 @@ import {RightWall} from "./meshes/RightWall"
 import {Ceiling} from "./meshes/Ceiling"
 import { TextSkills } from "./meshes/TextSkills"
 
+import LightToTable from "../src/lights/LightToTable"
 import LightToPaint from "../src/lights/LightToPaint"
 import LightToSkills from "../src/lights/LightToSkills"
 
@@ -48,6 +49,7 @@ export default function App() {
         
         <MovingPointLight/>
 
+      <LightToTable/>
       <Table position={[-3, 0, -7]}/>
 
         <LightToSkills/>
