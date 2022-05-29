@@ -31,6 +31,7 @@ import FrontWall from "./gltfjsx/FrontWall"
 import Kalimba from "./gltfjsx/Kalimba"
 import Table from "./gltfjsx/Table"
 import Book from "./gltfjsx/Book"
+import Laptop from "./gltfjsx/Laptop"
 
 
 export default function App() {
@@ -57,6 +58,7 @@ export default function App() {
         <Table position={[-2.9, 0, -7]}/>
         <Book position={[-2.8, 0.52, -6.7]}/>
         <Kalimba position={[-2.8, 0.52, -7]}/>
+        <Laptop position={[-2.8, 0.52, -7.5]}/>
 
         <LightToSkills/>
         <TextSkills />
