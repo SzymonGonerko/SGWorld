@@ -28,6 +28,7 @@ import {
 
 import Paint from "./gltfjsx/Paint"
 import FrontWall from "./gltfjsx/FrontWall"
+import Kalimba from "./gltfjsx/Kalimba"
 import Table from "./gltfjsx/Table"
 import Book from "./gltfjsx/Book"
 
@@ -55,6 +56,7 @@ export default function App() {
         <TextFavouriteThings/>
         <Table position={[-2.9, 0, -7]}/>
         <Book position={[-2.8, 0.52, -6.7]}/>
+        <Kalimba position={[-2.8, 0.52, -7]}/>
 
         <LightToSkills/>
         <TextSkills />
