@@ -29,6 +29,7 @@ import {
 import Paint from "./gltfjsx/Paint"
 import FrontWall from "./gltfjsx/FrontWall"
 import Table from "./gltfjsx/Table"
+import Book from "./gltfjsx/Book"
 
 
 export default function App() {
@@ -52,7 +53,8 @@ export default function App() {
 
         <LightToTable/>
         <TextFavouriteThings/>
-        <Table position={[-3, 0, -7]}/>
+        <Table position={[-2.9, 0, -7]}/>
+        <Book position={[-2.8, 0.52, -6.7]}/>
 
         <LightToSkills/>
         <TextSkills />

@@ -11,7 +11,7 @@ const LightToTable = ({ vec = new Vector3() }) => {
       LightToTable.current.target.position.lerp(vec.set(-3, 0.8, -7), 0.1)
       LightToTable.current.target.updateMatrixWorld()
     })
-    return <SpotLight position={[0, 2.6, -7]}  ref={LightToTable} penumbra={0.5} distance={6} angle={0.25} attenuation={0.8} anglePower={2} intensity={0.5} />
+    return <SpotLight position={[0, 2.6, -7]}  ref={LightToTable} penumbra={0.5} distance={6} angle={0.25} attenuation={0.8} anglePower={2} intensity={1} />
   }
 
   export default LightToTable

@@ -19,7 +19,7 @@ export const TV = () => {
     return (
       <group rotation={[0, 0, 0]}>
         <mesh rotation={[0, -Math.PI / 2, 0]} position={[3.36, 1.1, -10.5]}>
-          <planeGeometry args={[0.49, 1]} />
+          <planeGeometry args={[0.47, 1]} />
           <meshStandardMaterial side={THREE.FrontSide}>
             <videoTexture attach="map" args={[video]} />
           </meshStandardMaterial>
