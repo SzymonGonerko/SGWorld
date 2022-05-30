@@ -35,6 +35,10 @@ import Table from "./gltfjsx/Table"
 import Book from "./gltfjsx/Book"
 import Laptop from "./gltfjsx/Laptop"
 import Stereo from "./gltfjsx/Stereo"
+import Chair from "./gltfjsx/Chair"
+import Me from "./gltfjsx/Me"
+
+
 
 
 export default function App() {
@@ -45,7 +49,7 @@ export default function App() {
       {/* <ambientLight intensity={0.1} /> */}
 
 
-      <pointLight castShadow intensity={0.1} position={[0, 1, -5]} />
+      <pointLight castShadow intensity={0.2} position={[0, 1, -5]} />
       <Physics gravity={[0, -30, 0]}>
         <Ground />
         <Player />
@@ -78,10 +82,13 @@ export default function App() {
      
         <group position={[3.2, 0, -2]}>
           <Stereo position={[0, 0, 0]}/>
-          {/* <PositionalAudio autoplay loop url={music} distance={2} /> */}
+          <PositionalAudio autoplay loop url={music} distance={2} />
         </group>
      
+     <Chair position={[-2, 0, -7]}/>
+     <Chair position={[-2.3, 0, -7.6]} rotation={[0, Math.PI / 3, 0]} />
       
+<Me/>
 
       </Physics>
       <PointerLockControls />
