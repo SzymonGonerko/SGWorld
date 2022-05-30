@@ -10,7 +10,7 @@ export default function Model({ ...props }) {
   const group = useRef()
   const { nodes, materials } = useGLTF(url)
   return (
-    <group rotation={[0, Math.PI / 2,0]} ref={group} {...props} dispose={null}>
+    <group rotation={[0, Math.PI / 3,0]} ref={group} {...props} dispose={null}>
       <mesh 
       geometry={nodes.Kalimba.geometry} 
       material={materials.DefaultMaterial} 

@@ -12,9 +12,9 @@ export default function Model({ ...props }) {
   return (
     <group ref={group} {...props} dispose={null}>
       <group scale={0.0013}>
-        <group position={[-88.87, 0, 54.17]} rotation={[-Math.PI / 2, 0, 0.5]}>
-          <mesh castShadow geometry={nodes.Cube002_Keys_0.geometry} material={materials.Keys} />
-          <mesh castShadow geometry={nodes.Cube002_Laptop_0.geometry} material={materials.Laptop} />
+        <group position={[-88.87, 0, 54.17]} rotation={[-Math.PI / 2, 0, Math.PI / 2]}>
+          <mesh geometry={nodes.Cube002_Keys_0.geometry} material={materials.Keys} />
+          <mesh geometry={nodes.Cube002_Laptop_0.geometry} material={materials.Laptop} />
         </group>
       </group>
     </group>

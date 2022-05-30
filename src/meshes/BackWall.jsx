@@ -17,7 +17,7 @@ export const BackWall = (props) => {
   return (
     <mesh ref={cubeRef} castShadow layers={props.layers}>
       <boxBufferGeometry args={[7, 3, 0.2]} />
-      <meshLambertMaterial />
+      <meshLambertMaterial color={"#e0e0e0"} />
     </mesh>
   );
 };
