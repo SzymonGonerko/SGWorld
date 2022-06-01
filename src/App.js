@@ -1,3 +1,4 @@
+import React, {useState, useEffect} from "react";
 import { Canvas } from "@react-three/fiber"
 import { Stars, PointerLockControls } from "@react-three/drei"
 import { Physics } from "@react-three/cannon"
@@ -36,10 +37,9 @@ import Book from "./gltfjsx/Book"
 import Laptop from "./gltfjsx/Laptop"
 import Stereo from "./gltfjsx/Stereo"
 import Chair from "./gltfjsx/Chair"
+import Door from "./gltfjsx/Door"
 
 import WhiteBlackMe from "./gltfjsx/WhiteBlackMe"
-
-
 
 
 
@@ -49,7 +49,6 @@ export default function App() {
       <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
       <color attach="background" args={['#040811']} />
       {/* <ambientLight intensity={0.2} /> */}
-      
 
       <pointLight castShadow intensity={0.2} position={[0, 1, -5]} />
       <Physics gravity={[0, -30, 0]}>
@@ -84,7 +83,7 @@ export default function App() {
      
         <group position={[3.2, 0, -2]}>
           <Stereo position={[0, 0, 0]}/>
-          <PositionalAudio autoplay loop url={music} distance={2} />
+          {/* <PositionalAudio autoplay loop url={music} distance={2} /> */}
         </group>
      
      <Chair position={[-2, 0, -7]}/>
@@ -92,7 +91,8 @@ export default function App() {
 
 
      <MovingPointLight/>
-    <WhiteBlackMe rotation={[0, Math.PI / 1.7, 0]} position={[-2.9, 0, 5.1]}/>
+    <WhiteBlackMe rotation={[0, Math.PI / 1.7, 0]} position={[-3, 0, 4.9]}/>
+    <Door position={[-2.6, 0, 6.95]}/>
       
       </Physics>
       <PointerLockControls />

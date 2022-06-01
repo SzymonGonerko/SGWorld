@@ -14,20 +14,21 @@ const MovingPointLight = ({ vec = new Vector3() }) => {
     const light = useRef()
     const viewport = useThree((state) => state.viewport)
     useFrame(() => {
-        let time = Date.now() * 10
-        let positionX = Math.sin( time * 0.00007 ) + 1;
-        let positionY = Math.cos( 0.000007 )+ 0.2;
-        let positionZ = Math.cos( time * 0.00007 ) + 1;
-
+        // let time = Date.now() * 20
+        // let positionX = (Math.sin( time * 0.00007 ) /10) + 1;
+        // let positionY = Math.cos( 0.000007 )+ 0.2;
+        // let positionZ = Math.cos( time * 0.0007 ) + 1;
+    
         // light.current.position.x = positionX
-        light.current.position.y = positionY
-        light.current.position.z = -positionZ +6.5
+        // light.current.position.y = positionY
+        // light.current.position.z = positionZ
+          
 
 
     })
     return (
     
-    <Sphere ref={light} position={[-3, 1, 5.1]} args={[0.009, 16, 200]}>
+    <Sphere ref={light} position={[-2.8, 1.15, 5.3]} args={[0.009, 16, 200]}>
       <pointLight castShadow color="#ff8b8b" intensity={0.1} position={[0, 0, 0]} />
       <MeshWobbleMaterial
         attach="material"
