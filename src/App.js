@@ -36,7 +36,9 @@ import Book from "./gltfjsx/Book"
 import Laptop from "./gltfjsx/Laptop"
 import Stereo from "./gltfjsx/Stereo"
 import Chair from "./gltfjsx/Chair"
-import Me from "./gltfjsx/Me"
+
+import WhiteBlackMe from "./gltfjsx/WhiteBlackMe"
+
 
 
 
@@ -46,8 +48,8 @@ export default function App() {
     <Canvas shadows gl={{ alpha: false }} camera={{ fov: 45 }}>
       <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
       <color attach="background" args={['#040811']} />
-      {/* <ambientLight intensity={0.1} /> */}
-
+      {/* <ambientLight intensity={0.2} /> */}
+      
 
       <pointLight castShadow intensity={0.2} position={[0, 1, -5]} />
       <Physics gravity={[0, -30, 0]}>
@@ -58,7 +60,7 @@ export default function App() {
         <Paint />
         
         
-        {/* <MovingPointLight/> */}
+        
 
         <LightsToFavourite/>
         <TextFavouriteThings/>
@@ -87,9 +89,11 @@ export default function App() {
      
      <Chair position={[-2, 0, -7]}/>
      <Chair position={[-2.3, 0, -7.6]} rotation={[0, Math.PI / 3, 0]} />
-      
-<Me/>
 
+
+     <MovingPointLight/>
+    <WhiteBlackMe rotation={[0, Math.PI / 1.7, 0]} position={[-2.9, 0, 5.1]}/>
+      
       </Physics>
       <PointerLockControls />
     </Canvas>
