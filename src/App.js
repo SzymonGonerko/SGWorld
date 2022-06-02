@@ -20,6 +20,7 @@ import LightsToFavourite from "../src/lights/LightsToFavourite"
 import LightToPaint from "../src/lights/LightToPaint"
 import LightToSkills from "../src/lights/LightToSkills"
 import LightToWhereAreWe from "./lights/LightToWhereAreWe";
+import LightToWhoAmI from "./lights/LightToWhoAmI";
 
 import music from "../src/sounds/SmellsLikeTeenSpirit.mp3"
 
@@ -109,6 +110,11 @@ export default function App() {
     <Door position={[-2.6, 0, 6.95]}/>
 
 <TextWhereWhoAmI/>
+<LightToWhoAmI/>
+
+
+
+
       <LightToWhereAreWe/>
     <TextWhereAreWe/>
 

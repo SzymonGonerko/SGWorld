@@ -26,7 +26,7 @@ export const TextWhereWhoAmI = () => {
     }
 
     return (
-    <group position={[3.36, 1.45, 1]} rotation={[0, -Math.PI / 2, 0]}>
+    <group position={[3.36, 1.4, 1]} rotation={[0, -Math.PI / 2, 0]}>
         <group position={[-0.83, -0.1, 0]}>
             <Text {...title} text={"WHO"} position={[0, 0.7, 0]}/>
             <Text {...verticalTitle} text={"AM"} position={[0.35, 0.59, 0]} rotation={[0, 0, -Math.PI /2]}/>
