@@ -26,7 +26,7 @@ export const TextWhereAreWe = () => {
     }
 
     return (
-    <group position={[3.36, 1.5, 3.9]} rotation={[0, -Math.PI / 2, 0]}>
+    <group position={[3.36, 1.5, 4.6]} rotation={[0, -Math.PI / 2, 0]}>
         <group position={[-1, -0.1, 0]}>
             <Text {...title} text={"WHERE"} position={[0, 0.7, 0]}/>
             <Text {...verticalTitle} text={"ARE"} position={[0.45, 0.59, 0]} rotation={[0, 0, -Math.PI /2]}/>

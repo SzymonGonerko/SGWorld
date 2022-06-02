@@ -14,10 +14,12 @@ import {Ceiling} from "./meshes/Ceiling"
 import { TextSkills } from "./meshes/TextSkills"
 import {TextFavouriteThings} from './meshes/TextFavouriteThings'
 import { TextWhereAreWe } from "./meshes/TextWhereAreWe";
+import {TextWhereWhoAmI} from "./meshes/TextWhoAmI"
 
 import LightsToFavourite from "../src/lights/LightsToFavourite"
 import LightToPaint from "../src/lights/LightToPaint"
 import LightToSkills from "../src/lights/LightToSkills"
+import LightToWhereAreWe from "./lights/LightToWhereAreWe";
 
 import music from "../src/sounds/SmellsLikeTeenSpirit.mp3"
 
@@ -50,9 +52,8 @@ export default function App() {
     <Canvas shadows gl={{ alpha: false }} camera={{ fov: 45 }}>
       <Stars radius={100} depth={50} count={5000} factor={4} saturation={1} fade speed={1} />
       <color attach="background" args={['#040811']} />
-      <ambientLight intensity={0.1}/>
 
-      <pointLight castShadow intensity={0.1} position={[0, 1, -5]} />
+      <pointLight castShadow intensity={0.2} position={[0, 1, -5]} />
       <Physics gravity={[0, -30, 0]}>
         
         <Player />
@@ -107,9 +108,12 @@ export default function App() {
     <WhiteBlackMe rotation={[0, Math.PI / 1.7, 0]} position={[-2.8, 0, 4.9]}/>
     <Door position={[-2.6, 0, 6.95]}/>
 
+<TextWhereWhoAmI/>
+      <LightToWhereAreWe/>
+    <TextWhereAreWe/>
 
-      
-      <TextWhereAreWe/>
+
+
         <Ground/>
       </Physics>
       <PointerLockControls />

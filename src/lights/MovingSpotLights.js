@@ -26,8 +26,6 @@ const MovingSpotLights = ({ vec = new Vector3() }) => {
       secondLight.current.target.position.lerp(vec.set(-2.75, 1, 5.2), 0.1)
       secondLight.current.target.updateMatrixWorld()
 
-
-
         let time = Date.now() * 20
 
         let positionX = (Math.sin( time * 0.00007 ) /8) -2.5;
@@ -46,13 +44,6 @@ const MovingSpotLights = ({ vec = new Vector3() }) => {
         secondSphere.current.position.y = positionYSec
         secondSphere.current.position.z = positionZSec - 0.5
         
-        try {
-          // balls.current.geometry.boundingSphere.radius = 0.0000000000005
-          
-          // console.log(balls.current.geometry.boundingSphere.radius)
-        } catch (err) {
-          console.log(err)
-        }
         
 
     })
