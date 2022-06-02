@@ -20,7 +20,7 @@ import LightToSkills from "../src/lights/LightToSkills"
 
 import music from "../src/sounds/SmellsLikeTeenSpirit.mp3"
 
-import MovingPointLight from "./lights/MovingPointLight"
+import MovingSpotLights from "./lights/MovingSpotLights"
 import { TV } from "../src/meshes/TV"
 
 import {
@@ -46,14 +46,15 @@ import WhiteBlackMe from "./gltfjsx/WhiteBlackMe"
 export default function App() {
   return (
     <Canvas shadows gl={{ alpha: false }} camera={{ fov: 45 }}>
-      <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
+      <Stars radius={100} depth={50} count={5000} factor={4} saturation={1} fade speed={1} />
       <color attach="background" args={['#040811']} />
-      {/* <ambientLight intensity={0.2} /> */}
 
-      <pointLight castShadow intensity={0.2} position={[0, 1, -5]} />
+      <pointLight castShadow intensity={0.1} position={[0, 1, -5]} />
       <Physics gravity={[0, -30, 0]}>
-        <Ground />
+        
         <Player />
+
+
 
         <LightToPaint/>
         <Paint />
@@ -67,6 +68,9 @@ export default function App() {
         <Book position={[-2.8, 0.52, -6.7]}/>
         <Kalimba position={[ -2.8, 0.52, -7.4 ]}/>
         <Laptop position={[-2.8, 0.52, -7.1]}/>
+
+
+
 
         <LightToSkills/>
         <TextSkills />
@@ -83,17 +87,18 @@ export default function App() {
      
         <group position={[3.2, 0, -2]}>
           <Stereo position={[0, 0, 0]}/>
-          {/* <PositionalAudio autoplay loop url={music} distance={2} /> */}
+          <PositionalAudio autoplay loop url={music} distance={2} />
         </group>
      
      <Chair position={[-2, 0, -7]}/>
      <Chair position={[-2.3, 0, -7.6]} rotation={[0, Math.PI / 3, 0]} />
 
 
-     <MovingPointLight/>
-    <WhiteBlackMe rotation={[0, Math.PI / 1.7, 0]} position={[-3, 0, 4.9]}/>
+     <MovingSpotLights/>
+    <WhiteBlackMe rotation={[0, Math.PI / 1.7, 0]} position={[-2.75, 0, 4.9]}/>
     <Door position={[-2.6, 0, 6.95]}/>
       
+        <Ground/>
       </Physics>
       <PointerLockControls />
     </Canvas>
