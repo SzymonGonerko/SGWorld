@@ -11,7 +11,7 @@ const LightToPaint = ({ vec = new Vector3() }) => {
       light.current.target.position.lerp(vec.set(-3, 1.6, -1.9), 0.1)
       light.current.target.updateMatrixWorld()
     })
-    return <SpotLight position={[0, 2.6, -1]}  ref={light} penumbra={1} distance={6} angle={0.20} attenuation={0.8} anglePower={2} intensity={0.7} />
+    return <SpotLight position={[0, 2.6, -1]}  ref={light} penumbra={1} distance={6} angle={0.20} attenuation={0.8} anglePower={2} intensity={1} />
   }
 
   export default LightToPaint

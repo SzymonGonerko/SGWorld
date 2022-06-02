@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, Suspense} from "react";
 import { Canvas } from "@react-three/fiber"
 import { Stars, PointerLockControls } from "@react-three/drei"
 import { Physics } from "@react-three/cannon"
@@ -25,7 +25,7 @@ import { TV } from "../src/meshes/TV"
 
 import {
   MeshWobbleMaterial,
-  Sphere
+  Sphere, Html
 } from "@react-three/drei";
 
 
@@ -45,6 +45,7 @@ import WhiteBlackMe from "./gltfjsx/WhiteBlackMe"
 
 export default function App() {
   return (
+    <>
     <Canvas shadows gl={{ alpha: false }} camera={{ fov: 45 }}>
       <Stars radius={100} depth={50} count={5000} factor={4} saturation={1} fade speed={1} />
       <color attach="background" args={['#040811']} />
@@ -58,6 +59,8 @@ export default function App() {
 
         <LightToPaint/>
         <Paint />
+
+  
         
         
         
@@ -93,14 +96,21 @@ export default function App() {
      <Chair position={[-2, 0, -7]}/>
      <Chair position={[-2.3, 0, -7.6]} rotation={[0, Math.PI / 3, 0]} />
 
+{/* 
+     <Html rotation={[Math.PI / 2, 0, 0]} transform >
+          <button onClick={()=> {console.log("działa!!!!")}}>Click Me</button>
+     </Html> */}
+
 
      <MovingSpotLights/>
-    <WhiteBlackMe rotation={[0, Math.PI / 1.7, 0]} position={[-2.75, 0, 4.9]}/>
+    <WhiteBlackMe rotation={[0, Math.PI / 1.7, 0]} position={[-2.8, 0, 4.9]}/>
     <Door position={[-2.6, 0, 6.95]}/>
       
         <Ground/>
       </Physics>
       <PointerLockControls />
     </Canvas>
+    
+    </>
   )
 }

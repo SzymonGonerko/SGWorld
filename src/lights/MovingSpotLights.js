@@ -18,6 +18,7 @@ const MovingSpotLights = ({ vec = new Vector3() }) => {
     const firstLight = useRef()
     const secondLight = useRef()
 
+
     useFrame(() => {
       firstLight.current.target.position.lerp(vec.set(-2.75, 1, 4.9), 0.1)
       firstLight.current.target.updateMatrixWorld()
@@ -26,21 +27,33 @@ const MovingSpotLights = ({ vec = new Vector3() }) => {
       secondLight.current.target.updateMatrixWorld()
 
 
+
         let time = Date.now() * 20
 
         let positionX = (Math.sin( time * 0.00007 ) /8) -2.5;
-        let positionY = -(Math.cos( time * 0.00007)/ 8)+ 1;
+        let positionY = (Math.cos( time * 0.00007)/ 8)+ 1;
         let positionZ = (Math.cos( time * 0.00007)/ 8) + 5.1;
+
+        let positionXSec = (-Math.sin( time * 0.00007 ) /8) -2.5;
+        let positionYSec = (-Math.cos( time * 0.00007)/ 8)+ 1;
+        let positionZSec = (Math.cos( time * 0.00007)/ 8) + 5.1;
     
-        firstSphere.current.position.x = positionX
+        firstSphere.current.position.x = positionX - 0.2
         firstSphere.current.position.y = positionY
-        firstSphere.current.position.z = positionZ
+        firstSphere.current.position.z = positionZ + 0.1
 
-        secondSphere.current.position.x = positionX - 0.1
-        secondSphere.current.position.y = positionY
-        secondSphere.current.position.z = positionZ - 0.5
+        secondSphere.current.position.x = positionXSec - 0.3
+        secondSphere.current.position.y = positionYSec
+        secondSphere.current.position.z = positionZSec - 0.5
+        
+        try {
+          // balls.current.geometry.boundingSphere.radius = 0.0000000000005
           
-
+          // console.log(balls.current.geometry.boundingSphere.radius)
+        } catch (err) {
+          console.log(err)
+        }
+        
 
     })
     return (
@@ -57,7 +70,7 @@ const MovingSpotLights = ({ vec = new Vector3() }) => {
       />
   </Sphere>
 
-  <Sphere ref={secondSphere} position={[-2.8, 1.15, 5.1]} args={[0.009, 16, 200]}>
+  <Sphere ref={secondSphere} position={[-2.9, 1.15, 5.1]} args={[0.009, 16, 200]}>
       <SpotLight ref={secondLight} color="lightblue" position={[0, 0, 0]} penumbra={1} distance={6} angle={0.40} attenuation={0.1} anglePower={2} intensity={0.5} />
       <MeshWobbleMaterial
         attach="material"
@@ -68,6 +81,7 @@ const MovingSpotLights = ({ vec = new Vector3() }) => {
         roughness={0}
       />
   </Sphere>
+
   
   </>)
   }
