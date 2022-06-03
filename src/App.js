@@ -15,17 +15,19 @@ import { TextSkills } from "./meshes/TextSkills"
 import {TextFavouriteThings} from './meshes/TextFavouriteThings'
 import { TextWhereAreWe } from "./meshes/TextWhereAreWe";
 import {TextWhereWhoAmI} from "./meshes/TextWhoAmI"
+import { TextWhatCanIDo } from "./meshes/TextWhatCanIDo";
 
 import LightsToFavourite from "../src/lights/LightsToFavourite"
 import LightToPaint from "../src/lights/LightToPaint"
 import LightToSkills from "../src/lights/LightToSkills"
 import LightToWhereAreWe from "./lights/LightToWhereAreWe";
 import LightToWhoAmI from "./lights/LightToWhoAmI";
+import LightToWhatCanIDo from "./lights/LightToWhatCanIDo";
 
 import music from "../src/sounds/SmellsLikeTeenSpirit.mp3"
 
 import MovingSpotLights from "./lights/MovingSpotLights"
-import { TV } from "../src/meshes/TV"
+import { VanillaDate } from "./meshes/VanillaDate"
 
 import {
   MeshWobbleMaterial,
@@ -54,7 +56,7 @@ export default function App() {
       <Stars radius={100} depth={50} count={5000} factor={4} saturation={1} fade speed={1} />
       <color attach="background" args={['#040811']} />
 
-      <pointLight castShadow intensity={0.2} position={[0, 1, -5]} />
+      <pointLight castShadow intensity={0.13} position={[0, 1, -5]} />
       <Physics gravity={[0, -30, 0]}>
         
         <Player />
@@ -71,10 +73,10 @@ export default function App() {
 
         <LightsToFavourite/>
         <TextFavouriteThings/>
-        <Table position={[-2.9, 0, -7]}/>
-        <Book position={[-2.8, 0.52, -6.7]}/>
-        <Kalimba position={[ -2.8, 0.52, -7.4 ]}/>
-        <Laptop position={[-2.8, 0.52, -7.1]}/>
+        <Table position={[-2.9, 0, -8]}/>
+        <Book position={[-2.8, 0.52, -7.7]}/>
+        <Kalimba position={[ -2.8, 0.52, -8.4 ]}/>
+        <Laptop position={[-2.8, 0.52, -8.1]}/>
 
 
 
@@ -90,15 +92,15 @@ export default function App() {
         <RightWall position={[3.5, 1, -3]} type={"Static"}/>
         <LeftWall position={[-3.5, 1, -3]} type={"Static"} />
         <BackWall position={[0, 1, 7]} type={"Static"} />
-        <TV/>
+        <VanillaDate/>
      
-        <group position={[3.2, 0, -2]}>
+        <group position={[3.2, 0, -1]}>
           <Stereo position={[0, 0, 0]}/>
-          <PositionalAudio autoplay loop url={music} distance={2} />
+          {/* <PositionalAudio autoplay loop url={music} distance={2} /> */}
         </group>
      
-     <Chair position={[-2, 0, -7]}/>
-     <Chair position={[-2.3, 0, -7.6]} rotation={[0, Math.PI / 3, 0]} />
+     <Chair position={[-2, 0, -8]}/>
+     <Chair position={[-2.3, 0, -9.6]} rotation={[0, Math.PI / 3, 0]} />
 
 {/* 
      <Html rotation={[Math.PI / 2, 0, 0]} transform >
@@ -112,7 +114,8 @@ export default function App() {
 <TextWhereWhoAmI/>
 <LightToWhoAmI/>
 
-
+<LightToWhatCanIDo/>
+<TextWhatCanIDo/>
 
 
       <LightToWhereAreWe/>

@@ -8,10 +8,10 @@ import {SpotLight} from '@react-three/drei'
 const LightToPaint = ({ vec = new Vector3() }) => {
     const light = useRef()
     useFrame(() => {
-      light.current.target.position.lerp(vec.set(-3, 1.6, -1.9), 0.1)
+      light.current.target.position.lerp(vec.set(-3, 1.6, -2.9), 0.1)
       light.current.target.updateMatrixWorld()
     })
-    return <SpotLight position={[0, 2.6, -1]}  ref={light} penumbra={1} distance={6} angle={0.20} attenuation={0.8} anglePower={2} intensity={1} />
+    return <SpotLight position={[0, 2.6, -2]}  ref={light} penumbra={1} distance={6} angle={0.20} attenuation={0.8} anglePower={2} intensity={1} />
   }
 
   export default LightToPaint

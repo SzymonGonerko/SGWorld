@@ -25,6 +25,10 @@ export const TextFavouriteThings = () => {
         fontSize: 0.1,
         letterSpacing: 0.07,
     }
+    const title = {
+        ...initialStyles,
+        fontSize: 0.21
+    }
 
     const textLaptop = {
         ...initialStyles,
@@ -56,24 +60,32 @@ export const TextFavouriteThings = () => {
         letterSpacing: 0.07,
         maxWidth: 0.8,
         textAlign: "justify"
-    
+    }
+    const verticalTitle = {
+        ...initialStyles,
+        fontSize: 0.28,
+        letterSpacing: 0.1
     }
 
 
     return (
-    <group position={[-3.36, 1.3, -5]} rotation={[0, Math.PI / 2, 0]}>
+    <group position={[-3.36, 1.3, -6]} rotation={[0, Math.PI / 2, 0]}>
         <group position={[2, 0, 0]}>
-            <Text {...header} text={"MY FAVOURITE THINGS"} position={[0, 0.8, 0]}/>
-            <group position={[-0.9, 0.45, 0]}>
+            <group position={[0.1, 0, 0]}>
+                <Text {...title} text={"FAVOURITE"} position={[0.008, 0.76, 0]}/>
+                <Text {...verticalTitle} text={"MY"} position={[-0.51, 0.69, 0]} rotation={[0, 0, -Math.PI /2]}/>
+                <Text {...title} text={"THINGS"} position={[-0.1, 0.6, 0]}/>
+            </group>
+            <group position={[-0.9, 0.28, 0]}>
                 <Text {...textAuthor} text={"Markus Zusak,"} position={[0, 0, 0]}/>
                 <Text {...textTitle} text={'"The Book Thief"'} position={[-0.01, -0.11, 0]}/>
                 <Text {...textPlot} text={plotOfTheBookThief} position={[-0.01, -0.45, 0]}/>
             </group>
-            <group position={[0, 0.45, 0 ]}>
+            <group position={[0, 0.28, 0 ]}>
                 <Text {...textLaptop} text={"<main>Laptop</main>"} position={[0, 0, 0]}/>
                 <Text {...textPassion} text={passion} position={[-0.01, -0.346, 0]}/>
             </group>
-            <group position={[0.9, 0.45, 0]}>
+            <group position={[0.9, 0.28, 0]}>
                 <Text {...textKalimba} text={"Kalimba"} position={[0, 0, 0]}/>
                 <Text {...textKalimbaDesc} text={kalimbaDescription} position={[-0.01, -0.346, 0]}/>
             </group>

@@ -50,9 +50,5 @@ export const TextSkills = () => {
             <Text {...defaultText} text={"- WEBPACK"} position={[ 0.06, 0.26, 0]}/>
             <Text {...defaultText} text={"- GULP"} position={[-0.017, 0.12, 0]}/>
         </group>
-        <group position={[-2.42, -0.2, 0]}>
-            <Text {...initialStyles} text={"PREV PROJECT"}  position={[-0.09, 0.7, 0]}/>
-        </group>
-
     </group>);
   }
