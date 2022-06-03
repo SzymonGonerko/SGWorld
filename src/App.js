@@ -17,6 +17,7 @@ import { TextWhereAreWe } from "./meshes/TextWhereAreWe";
 import {TextWhereWhoAmI} from "./meshes/TextWhoAmI"
 import { TextWhatCanIDo } from "./meshes/TextWhatCanIDo";
 import { TextGreatPossibility } from "./meshes/TextGreatPossibility";
+import { TextContactWithMe } from "./meshes/TextContactWithMe";
 
 import LightsToFavourite from "../src/lights/LightsToFavourite"
 import LightToPaint from "../src/lights/LightToPaint"
@@ -58,7 +59,7 @@ export default function App() {
       <Stars radius={100} depth={50} count={5000} factor={4} saturation={1} fade speed={1} />
       <color attach="background" args={['#040811']} />
 
-      <pointLight castShadow intensity={0.12} position={[0, 1, -5]} />
+      <pointLight castShadow intensity={0.1} position={[0, 1, -5]} />
       <Physics gravity={[0, -30, 0]}>
         
         <Player />
@@ -70,6 +71,8 @@ export default function App() {
 
         <LightToGreatPossibility/>
         <TextGreatPossibility/>
+
+<TextContactWithMe/>
         
         
 
