@@ -26,7 +26,7 @@ const MovingSpotLights = ({ vec = new Vector3() }) => {
       secondLight.current.target.position.lerp(vec.set(-2.75, 1, 5.2), 0.1)
       secondLight.current.target.updateMatrixWorld()
 
-        let time = Date.now() * 20
+        let time = Date.now() * 15
 
         let positionX = (Math.sin( time * 0.00007 ) /8) -2.5;
         let positionY = (Math.cos( time * 0.00007)/ 8)+ 1;

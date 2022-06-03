@@ -69,7 +69,7 @@ export const TextFavouriteThings = () => {
 
 
     return (
-    <group position={[-3.36, 1.3, -6]} rotation={[0, Math.PI / 2, 0]}>
+    <group position={[-3.36, 1.3, -7]} rotation={[0, Math.PI / 2, 0]}>
         <group position={[2, 0, 0]}>
             <group position={[0.1, 0, 0]}>
                 <Text {...title} text={"FAVOURITE"} position={[0.008, 0.76, 0]}/>

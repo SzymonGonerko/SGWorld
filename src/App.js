@@ -16,6 +16,7 @@ import {TextFavouriteThings} from './meshes/TextFavouriteThings'
 import { TextWhereAreWe } from "./meshes/TextWhereAreWe";
 import {TextWhereWhoAmI} from "./meshes/TextWhoAmI"
 import { TextWhatCanIDo } from "./meshes/TextWhatCanIDo";
+import { TextGreatPossibility } from "./meshes/TextGreatPossibility";
 
 import LightsToFavourite from "../src/lights/LightsToFavourite"
 import LightToPaint from "../src/lights/LightToPaint"
@@ -23,6 +24,7 @@ import LightToSkills from "../src/lights/LightToSkills"
 import LightToWhereAreWe from "./lights/LightToWhereAreWe";
 import LightToWhoAmI from "./lights/LightToWhoAmI";
 import LightToWhatCanIDo from "./lights/LightToWhatCanIDo";
+import LightToGreatPossibility from "./lights/LightToGreatPossibility"
 
 import music from "../src/sounds/SmellsLikeTeenSpirit.mp3"
 
@@ -56,7 +58,7 @@ export default function App() {
       <Stars radius={100} depth={50} count={5000} factor={4} saturation={1} fade speed={1} />
       <color attach="background" args={['#040811']} />
 
-      <pointLight castShadow intensity={0.13} position={[0, 1, -5]} />
+      <pointLight castShadow intensity={0.12} position={[0, 1, -5]} />
       <Physics gravity={[0, -30, 0]}>
         
         <Player />
@@ -66,17 +68,17 @@ export default function App() {
         <LightToPaint/>
         <Paint />
 
-  
-        
+        <LightToGreatPossibility/>
+        <TextGreatPossibility/>
         
         
 
         <LightsToFavourite/>
         <TextFavouriteThings/>
-        <Table position={[-2.9, 0, -8]}/>
-        <Book position={[-2.8, 0.52, -7.7]}/>
-        <Kalimba position={[ -2.8, 0.52, -8.4 ]}/>
-        <Laptop position={[-2.8, 0.52, -8.1]}/>
+        <Table position={[-2.9, 0, -9]}/>
+        <Book position={[-2.8, 0.52, -8.7]}/>
+        <Kalimba position={[ -2.8, 0.52, -9.4 ]}/>
+        <Laptop position={[-2.8, 0.52, -9.1]}/>
 
 
 

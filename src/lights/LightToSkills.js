@@ -20,14 +20,14 @@ const LightToSkills = ({ vec = new Vector3() }) => {
       lighttToTitle.current.target.position.lerp(vec.set(3.2, 2, -6.35), 0.1)
       lighttToTitle.current.target.updateMatrixWorld()
 
-      lightToVanillaDate.current.target.position.lerp(vec.set(3.2, 1.3, -10.3), 0.1)
+      lightToVanillaDate.current.target.position.lerp(vec.set(3.36, 1.3, -11), 0.1)
       lightToVanillaDate.current.target.updateMatrixWorld()
     })
     return <group position={[0, 2.6, -7]}>
       <SpotLight position={[0, 0, 0]}  ref={lightToTech} penumbra={1} distance={10} angle={0.30} attenuation={0.8} anglePower={2} intensity={0.5} />
       <SpotLight position={[0, 0, 0]}  ref={lightToTools} penumbra={1} distance={10} angle={0.15} attenuation={0.8} anglePower={2} intensity={0.5} />
       <SpotLight position={[0, 0, 0]}  ref={lighttToTitle} color={"red"} penumbra={1} distance={10} angle={0.15} attenuation={0.8} anglePower={10} intensity={0.5} />
-      <SpotLight position={[0, 0, 0]}  ref={lightToVanillaDate} penumbra={1} distance={10} angle={0.20} attenuation={0.8} anglePower={2} intensity={0.5} />
+      <SpotLight position={[0, 0, 0]}  ref={lightToVanillaDate} penumbra={1} distance={10} angle={0.25} attenuation={0.8} anglePower={2} intensity={0.5} />
     </group>
   }
 
