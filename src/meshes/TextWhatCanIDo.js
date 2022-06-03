@@ -30,7 +30,7 @@ export const TextWhatCanIDo = () => {
     <group position={[3.36, 1.4, -2.3]} rotation={[0, -Math.PI / 2, 0]}>
         <group position={[0, -0.1, 0]}>
             <Text {...title} text={"WHAT"} position={[-0.53, 0.77, 0]}/>
-            <Text {...verticalTitle} text={"CAN"} position={[-0.9, 0.61, 0]} rotation={[0, 0, -Math.PI /2]}/>
+            <Text {...verticalTitle} text={"CAN"} position={[-0.9, 0.615, 0]} rotation={[0, 0, -Math.PI /2]}/>
             <Text {...title} text={"I DO FOR YOUR CLIENT"} position={[0.04, 0.47, 0]}/>
         </group>
 
