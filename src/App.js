@@ -19,6 +19,7 @@ import { TextWhatCanIDo } from "./meshes/TextWhatCanIDo";
 import { TextGreatPossibility } from "./meshes/TextGreatPossibility";
 import { TextContactWithMe } from "./meshes/TextContactWithMe";
 import { TextPaint } from "./meshes/TextPaint"
+import { TextLicences } from "./meshes/TextLicences";
 
 import LightsToFavourite from "../src/lights/LightsToFavourite"
 import LightToPaint from "../src/lights/LightToPaint"
@@ -131,7 +132,7 @@ export default function App() {
       <LightToWhereAreWe/>
     <TextWhereAreWe/>
 
-
+<TextLicences/>
 
         <Ground/>
       </Physics>
