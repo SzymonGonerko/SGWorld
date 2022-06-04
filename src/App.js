@@ -164,8 +164,8 @@ export default function App() {
           <FancyMesh color={"blue"}/>
         </Sphere>
 
-        <LightToTrees color={"green"} objectPosition={["1", "17", "-25"]} lightPos={["-8", "0.5", "-29"]} />
-        <Sphere visible position={[-7, 4, -28]} args={[0.3, 16, 200]}>
+        <LightToTrees color={"green"} objectPosition={["1", "40", "-15"]} lightPos={["-3", "0.5", "-25"]} />
+        <Sphere visible position={[-3, 3, -25]} args={[0.3, 16, 200]}>
           <FancyMesh color={"green"}/>
         </Sphere>
 
