@@ -12,7 +12,7 @@ const LightsToFavourite = ({ vec = new Vector3() }) => {
       LightToTable.current.target.updateMatrixWorld()
     })
     return <group position={[0, 2.6, -9]}>
-    <SpotLight position={[0, 0, 0]}   ref={LightToTable} penumbra={0.5} distance={6} angle={0.38} attenuation={0.8} anglePower={2} intensity={1} />
+    <SpotLight position={[0, 0, 0]}   ref={LightToTable} penumbra={0.5} distance={6} angle={0.38} attenuation={0.8} anglePower={2} intensity={0.5} />
     </group>
 
   }

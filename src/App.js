@@ -7,17 +7,18 @@ import { Player } from "./meshes/Player"
 import { SpotLight, PositionalAudio} from "@react-three/drei"
 
 
-import {BackWall} from "./meshes/BackWall"
-import {LeftWall} from "./meshes/LeftWall"
-import {RightWall} from "./meshes/RightWall"
-import {Ceiling} from "./meshes/Ceiling"
+import { BackWall } from "./meshes/BackWall"
+import { LeftWall } from "./meshes/LeftWall"
+import { RightWall } from "./meshes/RightWall"
+import { Ceiling } from "./meshes/Ceiling"
 import { TextSkills } from "./meshes/TextSkills"
-import {TextFavouriteThings} from './meshes/TextFavouriteThings'
+import { TextFavouriteThings } from './meshes/TextFavouriteThings'
 import { TextWhereAreWe } from "./meshes/TextWhereAreWe";
-import {TextWhereWhoAmI} from "./meshes/TextWhoAmI"
+import { TextWhereWhoAmI} from "./meshes/TextWhoAmI"
 import { TextWhatCanIDo } from "./meshes/TextWhatCanIDo";
 import { TextGreatPossibility } from "./meshes/TextGreatPossibility";
 import { TextContactWithMe } from "./meshes/TextContactWithMe";
+import { TextPaint } from "./meshes/TextPaint"
 
 import LightsToFavourite from "../src/lights/LightsToFavourite"
 import LightToPaint from "../src/lights/LightToPaint"
@@ -26,8 +27,9 @@ import LightToWhereAreWe from "./lights/LightToWhereAreWe";
 import LightToWhoAmI from "./lights/LightToWhoAmI";
 import LightToWhatCanIDo from "./lights/LightToWhatCanIDo";
 import LightToGreatPossibility from "./lights/LightToGreatPossibility"
+import LightToContactWithMe from "./lights/LightToContact";
 
-import music from "../src/sounds/SmellsLikeTeenSpirit.mp3"
+import music from "../src/sounds/FKJ.mp3"
 
 import MovingSpotLights from "./lights/MovingSpotLights"
 import { VanillaDate } from "./meshes/VanillaDate"
@@ -68,10 +70,13 @@ export default function App() {
 
         <LightToPaint/>
         <Paint />
+        <TextPaint/>
 
         <LightToGreatPossibility/>
         <TextGreatPossibility/>
 
+
+<LightToContactWithMe/>
 <TextContactWithMe/>
         
         
@@ -99,9 +104,9 @@ export default function App() {
         <BackWall position={[0, 1, 7]} type={"Static"} />
         <VanillaDate/>
      
-        <group position={[3.2, 0, -1]}>
+        <group position={[3.2, 0, 2.5]}>
           <Stereo position={[0, 0, 0]}/>
-          {/* <PositionalAudio autoplay loop url={music} distance={2} /> */}
+          <PositionalAudio autoplay loop url={music} distance={2} />
         </group>
      
      <Chair position={[-2, 0, -8]}/>
