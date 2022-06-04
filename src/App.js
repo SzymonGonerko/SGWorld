@@ -51,6 +51,7 @@ import Laptop from "./gltfjsx/Laptop"
 import Stereo from "./gltfjsx/Stereo"
 import Chair from "./gltfjsx/Chair"
 import Door from "./gltfjsx/Door"
+import Tree from "./gltfjsx/Tree"
 
 import WhiteBlackMe from "./gltfjsx/WhiteBlackMe"
 
@@ -62,6 +63,7 @@ export default function App() {
     <Canvas shadows gl={{ alpha: false }} camera={{ fov: 45 }}>
       <Stars radius={100} depth={50} count={5000} factor={4} saturation={1} fade speed={1} />
       <color attach="background" args={['#040811']} />
+      {/* <ambientLight intensity={0.1} /> */}
 
       <pointLight castShadow intensity={0.14} position={[0, 1, -5]} />
       <Physics gravity={[0, -30, 0]}>
@@ -97,13 +99,15 @@ export default function App() {
         <TextSkills />
 
 
-
+        <Tree position={[4, -2, -23]}/>
+        <Tree position={[-3, -2, -23]}/>
+        <Tree position={[1, 0, -30]}/>
         
         <Ceiling position={[0, 2.6, -3]} type={"Static"}/>
         <FrontWindows position={[0.45, 0, -13.5]}/>
 
-        <FrontWall position={[-2, 1.1, -13.65]} type={"Static"}/>
-        <FrontWall position={[3.5, 1.1, -13.65]} type={"Static"}/>
+        <FrontWall position={[-2, 1.3, -13.65]} type={"Static"}/>
+        <FrontWall position={[3.5, 1.3, -13.65]} type={"Static"}/>
         <RightWall position={[3.5, 1, -3]} type={"Static"}/>
         <LeftWall position={[-3.5, 1, -3]} type={"Static"} />
         <BackWall position={[0, 1, 7]} type={"Static"} />
