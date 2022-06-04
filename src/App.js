@@ -8,6 +8,7 @@ import { SpotLight, PositionalAudio} from "@react-three/drei"
 
 
 import { BackWall } from "./meshes/BackWall"
+import { FrontWall } from "./meshes/FrontWall"
 import { LeftWall } from "./meshes/LeftWall"
 import { RightWall } from "./meshes/RightWall"
 import { Ceiling } from "./meshes/Ceiling"
@@ -42,7 +43,7 @@ import {
 
 
 import Paint from "./gltfjsx/Paint"
-import FrontWall from "./gltfjsx/FrontWall"
+import FrontWindows from "./gltfjsx/FrontWindows"
 import Kalimba from "./gltfjsx/Kalimba"
 import Table from "./gltfjsx/Table"
 import Book from "./gltfjsx/Book"
@@ -62,7 +63,7 @@ export default function App() {
       <Stars radius={100} depth={50} count={5000} factor={4} saturation={1} fade speed={1} />
       <color attach="background" args={['#040811']} />
 
-      <pointLight castShadow intensity={0.1} position={[0, 1, -5]} />
+      <pointLight castShadow intensity={0.14} position={[0, 1, -5]} />
       <Physics gravity={[0, -30, 0]}>
         
         <Player />
@@ -99,7 +100,10 @@ export default function App() {
 
         
         <Ceiling position={[0, 2.6, -3]} type={"Static"}/>
-        <FrontWall position={[-0.9, 0, -13.5]}/>
+        <FrontWindows position={[0.45, 0, -13.5]}/>
+
+        <FrontWall position={[-2, 1.1, -13.65]} type={"Static"}/>
+        <FrontWall position={[3.5, 1.1, -13.65]} type={"Static"}/>
         <RightWall position={[3.5, 1, -3]} type={"Static"}/>
         <LeftWall position={[-3.5, 1, -3]} type={"Static"} />
         <BackWall position={[0, 1, 7]} type={"Static"} />
@@ -112,11 +116,6 @@ export default function App() {
      
      <Chair position={[-2, 0, -8]}/>
      <Chair position={[-2.3, 0, -9.6]} rotation={[0, Math.PI / 3, 0]} />
-
-{/* 
-     <Html rotation={[Math.PI / 2, 0, 0]} transform >
-          <button onClick={()=> {console.log("działa!!!!")}}>Click Me</button>
-     </Html> */}
 
      <MovingSpotLights/>
     <WhiteBlackMe rotation={[0, Math.PI / 1.7, 0]} position={[-2.8, 0, 4.9]}/>
