@@ -1,9 +1,9 @@
 import React from "react";
 import { useBox } from "@react-three/cannon";
 
-export const BridgeToHelloWorld = (props) => {
+export const FloorInFrontOfHelloWorld = (props) => {
   const [cubeRef] = useBox(() => ({
-    rotation: [-90.4, 0, 89.57],
+    rotation: [-89.5, 0, 91.1],
     mass: 1000,
     args: [18, 3, 0.2],
     material: {
@@ -18,7 +18,7 @@ export const BridgeToHelloWorld = (props) => {
     <mesh ref={cubeRef} castShadow layers={props.layers}>
       <boxBufferGeometry args={[18, 3, 0.2]} />
       <meshLambertMaterial />
-      <meshStandardMaterial  roughness={0.8} color="white" />
+      <meshStandardMaterial  roughness={1} color="grey" />
     </mesh>
   );
 };

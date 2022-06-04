@@ -24,6 +24,8 @@ import { TextLicences } from "./meshes/TextLicences";
 import { TextHelloWorld } from "./meshes/TextHelloWorld"
 import { TextWelcomeInGarden } from "./meshes/TextWelcomeInGarden"
 import {FancyMesh} from "./meshes/FancyMesh"
+import {BridgeToHelloWorld} from "./meshes/BridgeToHelloWorld"
+import { FloorInFrontOfHelloWorld } from "./meshes/FloorInFrontOfHelloWorld"
 
 import LightsToFavourite from "../src/lights/LightsToFavourite"
 import LightToPaint from "../src/lights/LightToPaint"
@@ -168,6 +170,9 @@ export default function App() {
         <Sphere visible position={[-3, 3, -25]} args={[0.3, 16, 200]}>
           <FancyMesh color={"green"}/>
         </Sphere>
+
+        <FloorInFrontOfHelloWorld position={[1.8, 11, -2]} type={"Static"}/>
+        <BridgeToHelloWorld position={[-6, 4.5, -9]} type={"Static"}/>
 
 
 
