@@ -23,8 +23,8 @@ import { TextPaint } from "./meshes/TextPaint"
 import { TextLicences } from "./meshes/TextLicences";
 import { TextHelloWorld } from "./meshes/TextHelloWorld"
 import { TextWelcomeInGarden } from "./meshes/TextWelcomeInGarden"
-import {FancyMesh} from "./meshes/FancyMesh"
-import {BridgeToHelloWorld} from "./meshes/BridgeToHelloWorld"
+import { FancyMesh } from "./meshes/FancyMesh"
+import { BridgeToHelloWorld } from "./meshes/BridgeToHelloWorld"
 import { FloorInFrontOfHelloWorld } from "./meshes/FloorInFrontOfHelloWorld"
 
 import LightsToFavourite from "../src/lights/LightsToFavourite"
@@ -63,16 +63,22 @@ import Tree from "./gltfjsx/Tree"
 
 import WhiteBlackMe from "./gltfjsx/WhiteBlackMe"
 
+import {Loader} from './Loader'
+
 
 
 export default function App() {
   return (
+    <>
+
+<Loader/>
+
+
     <Canvas shadows gl={{ alpha: false }} camera={{ fov: 45 }}>
-    
+    <Suspense fallback={null}>
 
       <Stars radius={100} depth={50} count={5000} factor={4} saturation={1} fade speed={1} />
       <color attach="background" args={['#040811']} />
-      {/* <ambientLight intensity={0.1} /> */}
 
       <pointLight castShadow intensity={0.14} position={[0, 1, -5]} />
       <Physics gravity={[0, -30, 0]}>
@@ -89,8 +95,8 @@ export default function App() {
         <TextGreatPossibility/>
 
 
-<LightToContactWithMe/>
-<TextContactWithMe/>
+        <LightToContactWithMe/>
+        <TextContactWithMe/>
         
 
         <LightsToFavourite/>
@@ -99,11 +105,6 @@ export default function App() {
         <Book position={[-2.8, 0.52, -8.7]}/>
         <Kalimba position={[ -2.8, 0.52, -9.4 ]}/>
         <Laptop position={[-2.8, 0.52, -9.1]}/>
-
-
-
-
-        
 
 
 
@@ -180,6 +181,8 @@ export default function App() {
       <Ground/>
       </Physics>
       <PointerLockControls />
+      </Suspense>
     </Canvas>
+    </>
   )
 }

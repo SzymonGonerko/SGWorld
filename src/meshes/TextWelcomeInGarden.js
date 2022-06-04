@@ -5,7 +5,7 @@ import pointerIcon from "../icons/pointer.svg"
 
 import {Text} from "@react-three/drei";
 
-const inspiration = "Three years ago I was at a great event in Wrocław. I remember it to this day. While I wrote code I based on my memories. Check It ..."
+const inspiration = "Three years ago I was at a great event in Wrocław. I remember it to this day. While I wrote code I based on my memories. Please, check It ..."
 
 
 
