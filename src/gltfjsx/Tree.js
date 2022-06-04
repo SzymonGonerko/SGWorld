@@ -45,7 +45,7 @@ export default function Model({ ...props }) {
                 <mesh geometry={nodes.Object_7_1.geometry} material={materials.cypreschauve_bark_D_COLOR_0_COLOR_0_COLOR_0} />
                 <mesh geometry={nodes.Object_7_2.geometry} material={materials.CypresChauve_mousse_D_COLOR_0_COLOR_0_COLOR_0} />
                 <mesh geometry={nodes.Object_7_3.geometry} material={materials.cypreschauve_needles_D_COLOR_0_COLOR_0_COLOR_0} />
-                <mesh geometry={nodes.Object_7_4.geometry} material={materials.bald_cypress_03Leaves_4} />
+                <mesh geometry={nodes.Object_7_4.geometry} material={materials.bald_cypress_03Leaves_4}/>
                 <mesh geometry={nodes.Object_7_5.geometry} material={materials.CypresChauve_mousse_D_COLOR_0_COLOR_0_COLOR_0_COLOR_0_COLOR_0} />
                 <mesh geometry={nodes.Object_7_6.geometry} material={materials['bald_cypress_03Leaves_4.001_COLOR_0']} />
                 <mesh geometry={nodes.Object_7_7.geometry} material={materials['CypresChauve_mousse_D_COLOR_0_COLOR_0_COLOR_0_COLOR_0.001_COLOR']} />

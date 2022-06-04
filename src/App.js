@@ -21,6 +21,9 @@ import { TextGreatPossibility } from "./meshes/TextGreatPossibility";
 import { TextContactWithMe } from "./meshes/TextContactWithMe";
 import { TextPaint } from "./meshes/TextPaint"
 import { TextLicences } from "./meshes/TextLicences";
+import { TextHelloWorld } from "./meshes/TextHelloWorld"
+import { TextWelcomeInGarden } from "./meshes/TextWelcomeInGarden"
+import {FancyMesh} from "./meshes/FancyMesh"
 
 import LightsToFavourite from "../src/lights/LightsToFavourite"
 import LightToPaint from "../src/lights/LightToPaint"
@@ -30,11 +33,14 @@ import LightToWhoAmI from "./lights/LightToWhoAmI";
 import LightToWhatCanIDo from "./lights/LightToWhatCanIDo";
 import LightToGreatPossibility from "./lights/LightToGreatPossibility"
 import LightToContactWithMe from "./lights/LightToContact";
+import LightToTrees from "./lights/LightToTrees";
 
 import music from "../src/sounds/FKJ.mp3"
 
 import MovingSpotLights from "./lights/MovingSpotLights"
 import { VanillaDate } from "./meshes/VanillaDate"
+
+
 
 import {
   MeshWobbleMaterial,
@@ -59,8 +65,9 @@ import WhiteBlackMe from "./gltfjsx/WhiteBlackMe"
 
 export default function App() {
   return (
-    <>
     <Canvas shadows gl={{ alpha: false }} camera={{ fov: 45 }}>
+    
+
       <Stars radius={100} depth={50} count={5000} factor={4} saturation={1} fade speed={1} />
       <color attach="background" args={['#040811']} />
       {/* <ambientLight intensity={0.1} /> */}
@@ -83,7 +90,6 @@ export default function App() {
 <LightToContactWithMe/>
 <TextContactWithMe/>
         
-        
 
         <LightsToFavourite/>
         <TextFavouriteThings/>
@@ -95,13 +101,15 @@ export default function App() {
 
 
 
+        
+
+
+
         <LightToSkills/>
         <TextSkills />
 
 
-        <Tree position={[4, -2, -23]}/>
-        <Tree position={[-3, -2, -23]}/>
-        <Tree position={[1, 0, -30]}/>
+
         
         <Ceiling position={[0, 2.6, -3]} type={"Static"}/>
         <FrontWindows position={[0.45, 0, -13.5]}/>
@@ -125,23 +133,47 @@ export default function App() {
     <WhiteBlackMe rotation={[0, Math.PI / 1.7, 0]} position={[-2.8, 0, 4.9]}/>
     <Door position={[-2.6, 0, 6.95]}/>
 
-<TextWhereWhoAmI/>
-<LightToWhoAmI/>
+    <TextWhereWhoAmI/>
+    <LightToWhoAmI/>
 
-<LightToWhatCanIDo/>
-<TextWhatCanIDo/>
+    <LightToWhatCanIDo/>
+    <TextWhatCanIDo/>
 
 
-      <LightToWhereAreWe/>
+    <LightToWhereAreWe/>
     <TextWhereAreWe/>
+    <TextLicences/>
 
-<TextLicences/>
+{/*  ----------------GARDEN---------------- */}
 
-        <Ground/>
+        <TextHelloWorld/>
+        <TextWelcomeInGarden/>
+
+        <Tree position={[4, -2, -23]}/>
+        <Tree position={[-3, -2, -23]}/>
+        <Tree position={[1, 0, -30]}/>
+
+
+        <LightToTrees color={"red"} objectPosition={["2.7", "3", "-23"]} lightPos={["2.3", "1.2", "-23"]} />
+        <Sphere visible position={[2.3, 1.7, -23]} args={[0.3, 16, 200]}>
+          <FancyMesh color={"red"}/>
+        </Sphere>
+
+        <LightToTrees color={"blue"} objectPosition={["2", "4", "-27"]} lightPos={["2", "3", "-27"]} />
+        <Sphere visible position={[2, 4, -27]} args={[0.3, 16, 200]}>
+          <FancyMesh color={"blue"}/>
+        </Sphere>
+
+        <LightToTrees color={"green"} objectPosition={["1", "17", "-25"]} lightPos={["-8", "0.5", "-29"]} />
+        <Sphere visible position={[-7, 4, -28]} args={[0.3, 16, 200]}>
+          <FancyMesh color={"green"}/>
+        </Sphere>
+
+
+
+      <Ground/>
       </Physics>
       <PointerLockControls />
     </Canvas>
-    
-    </>
   )
 }

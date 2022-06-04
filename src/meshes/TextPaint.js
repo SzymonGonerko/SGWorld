@@ -23,7 +23,7 @@ export const TextPaint = () => {
 
     return (
     <group position={[-3.36, 1.1, -3]} rotation={[0, Math.PI / 2, 0]}>
-        <group position={[2.05, 0, 0]}>
+        <group position={[2.04, 0, 0]}>
             <Text {...defaultText} text={textAuthor} position={[0, 0.2, 0]}/>
             <Text {...defaultText} text={textTitle} position={[0, 0.15, 0]}/>
             <Text {...defaultText} text={textData} position={[-0.04, 0.1, 0]}/>
