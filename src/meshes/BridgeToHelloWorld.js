@@ -16,7 +16,7 @@ export const BridgeToHelloWorld = (props) => {
 
   return (
     <mesh ref={cubeRef} castShadow layers={props.layers}>
-      <boxBufferGeometry args={[18, 3, 0.2]} />
+      <boxBufferGeometry args={[17.3, 3, 0.2]} />
       <meshLambertMaterial />
       <meshStandardMaterial  roughness={0.8} color="white" />
     </mesh>

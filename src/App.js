@@ -35,7 +35,7 @@ import LightToWhoAmI from "./lights/LightToWhoAmI";
 import LightToWhatCanIDo from "./lights/LightToWhatCanIDo";
 import LightToGreatPossibility from "./lights/LightToGreatPossibility"
 import LightToContactWithMe from "./lights/LightToContact";
-import LightToTrees from "./lights/LightToTrees";
+import SpotLightInGarden from "./lights/SpotLightInGarden";
 
 import music from "../src/sounds/FKJ.mp3"
 
@@ -156,21 +156,22 @@ export default function App() {
         <Tree position={[1, 0, -30]}/>
 
 
-        <LightToTrees color={"red"} objectPosition={["2.7", "3", "-23"]} lightPos={["2.3", "1.2", "-23"]} />
+        <SpotLightInGarden color={"red"} objectPosition={["2.7", "3", "-23"]} lightPos={["2.3", "1.2", "-23"]} />
         <Sphere visible position={[2.3, 1.7, -23]} args={[0.3, 16, 200]}>
           <FancyMesh color={"red"}/>
         </Sphere>
 
-        <LightToTrees color={"blue"} objectPosition={["2", "4", "-27"]} lightPos={["2", "3", "-27"]} />
+        <SpotLightInGarden color={"blue"} objectPosition={["2", "4", "-27"]} lightPos={["2", "3", "-27"]} />
         <Sphere visible position={[2, 4, -27]} args={[0.3, 16, 200]}>
           <FancyMesh color={"blue"}/>
         </Sphere>
 
-        <LightToTrees color={"green"} objectPosition={["1", "40", "-15"]} lightPos={["-3", "0.5", "-25"]} />
+        <SpotLightInGarden color={"green"} objectPosition={["1", "40", "-15"]} lightPos={["-3", "0.5", "-25"]} />
         <Sphere visible position={[-3, 3, -25]} args={[0.3, 16, 200]}>
           <FancyMesh color={"green"}/>
         </Sphere>
 
+        <SpotLightInGarden color={"white"} objectPosition={["1", "40", "-15"]} lightPos={["-2", "12", "0"]} />
         <FloorInFrontOfHelloWorld position={[1.8, 11, -2]} type={"Static"}/>
         <BridgeToHelloWorld position={[-6, 4.5, -9]} type={"Static"}/>
 
