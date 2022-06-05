@@ -32,7 +32,7 @@ export const VanillaDate = () => {
       borderRadius: "10px",
       padding: "10px",
       fontFamily: "OpenSans",
-      backgroundColor: "#6b3781d9",
+      backgroundColor: "transparent",
       boxShadow: "0px 0px 24px 0px rgba(137, 28, 129, 1)",
       color: "black",
       font: "arial",

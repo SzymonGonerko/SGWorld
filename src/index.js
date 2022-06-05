@@ -1,25 +1,18 @@
-
 import ReactDOM from "react-dom"
-import React, {useState, createContext, useEffect} from "react";
+import React, {useState} from "react";
 import "./styles.css"
 import App from "./App"
 
-export const AppContext = createContext({})
 
 function Overlay() {
-  const [state, setState] = useState({
-    ready: false
-  })
+  const [isReady, setIsReady] = useState(false)
 
   return (
-    <AppContext.Provider value={{state, setState}}>
-      {state.ready && <App/>}
-      <div className={`fullscreen bg ${state.ready ? "ready" : "notready"} ${state.ready && "clicked"}`}>
-        <div className="stack">
-          <button onClick={() => setState((prev) => ({...prev, ready: true}))}>Click (needs fullscreen)</button>
-        </div>
-      </div>
-    </AppContext.Provider>
+<>
+      {isReady && <App/>}
+      <header>SGWorld</header>
+      <button onClick={() => setIsReady(true)}>Enter VirtualWorld</button>
+      </>
   )
 }
 

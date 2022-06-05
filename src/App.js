@@ -4,7 +4,10 @@ import { Stars, PointerLockControls } from "@react-three/drei"
 import { Physics } from "@react-three/cannon"
 import { Ground } from "./meshes/Ground"
 import { Player } from "./meshes/Player"
-import { SpotLight, PositionalAudio} from "@react-three/drei"
+import { PositionalAudio } from "@react-three/drei"
+
+
+import Loader from './Loader'
 
 
 import { BackWall } from "./meshes/BackWall"
@@ -15,7 +18,7 @@ import { Ceiling } from "./meshes/Ceiling"
 import { TextSkills } from "./meshes/TextSkills"
 import { TextFavouriteThings } from './meshes/TextFavouriteThings'
 import { TextWhereAreWe } from "./meshes/TextWhereAreWe";
-import { TextWhereWhoAmI} from "./meshes/TextWhoAmI"
+import { TextWhereWhoAmI } from "./meshes/TextWhoAmI"
 import { TextWhatCanIDo } from "./meshes/TextWhatCanIDo";
 import { TextGreatPossibility } from "./meshes/TextGreatPossibility";
 import { TextContactWithMe } from "./meshes/TextContactWithMe";
@@ -44,10 +47,7 @@ import { VanillaDate } from "./meshes/VanillaDate"
 
 
 
-import {
-  MeshWobbleMaterial,
-  Sphere, Html
-} from "@react-three/drei";
+import {Sphere} from "@react-three/drei";
 
 
 import Paint from "./gltfjsx/Paint"
@@ -63,24 +63,28 @@ import Tree from "./gltfjsx/Tree"
 
 import WhiteBlackMe from "./gltfjsx/WhiteBlackMe"
 
-import {Loader} from './Loader'
+
 
 
 
 export default function App() {
   return (
     <>
-
-<Loader/>
+    <Loader/>
 
 
     <Canvas shadows gl={{ alpha: false }} camera={{ fov: 45 }}>
     <Suspense fallback={null}>
+    <group position={[3.2, 0, 2.5]}>
+          <Stereo position={[0, 0, 0]}/>
+          <PositionalAudio autoplay loop url={music} distance={2} />
+        </group>
+
 
       <Stars radius={100} depth={50} count={5000} factor={4} saturation={1} fade speed={1} />
       <color attach="background" args={['#040811']} />
 
-      <pointLight castShadow intensity={0.14} position={[0, 1, -5]} />
+      <pointLight castShadow intensity={0.11} position={[0, 1, -5]} />
       <Physics gravity={[0, -30, 0]}>
         
         <Player />
@@ -124,10 +128,7 @@ export default function App() {
         <BackWall position={[0, 1, 7]} type={"Static"} />
         <VanillaDate/>
      
-        <group position={[3.2, 0, 2.5]}>
-          <Stereo position={[0, 0, 0]}/>
-          <PositionalAudio autoplay loop url={music} distance={2} />
-        </group>
+
      
      <Chair position={[-2, 0, -8]}/>
      <Chair position={[-2.3, 0, -9.6]} rotation={[0, Math.PI / 3, 0]} />

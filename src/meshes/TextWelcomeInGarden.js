@@ -5,7 +5,7 @@ import pointerIcon from "../icons/pointer.svg"
 
 import {Text} from "@react-three/drei";
 
-const inspiration = "Three years ago I was at a great event in Wrocław. I remember it to this day. While I wrote code I based on my memories. Please, check It ..."
+const inspiration = "Three years ago I was at a great event in Wrocław. I remember it to this day. Unfortunately I have no pics to show You... there were too many colors. While I wrote code I based on my memories. Please, check It ..."
 
 
 
@@ -13,7 +13,7 @@ export const TextWelcomeInGarden = () => {
     const welcome = {
         font: OpenSans,
         color: "violet",
-        maxWidth: 1.3
+        maxWidth: 1.4
       };
 
       const initStylepointerIcon = {
