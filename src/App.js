@@ -77,7 +77,7 @@ export default function App() {
     <Suspense fallback={null}>
     <group position={[3.2, 0, 2.5]}>
           <Stereo position={[0, 0, 0]}/>
-          <PositionalAudio autoplay loop url={music} distance={2} />
+          <PositionalAudio setVolume={"0.1"} autoplay loop url={music} distance={2} />
         </group>
 
 

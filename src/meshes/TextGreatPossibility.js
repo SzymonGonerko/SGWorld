@@ -20,10 +20,19 @@ const [isClicked, setIsClicked] = useState(false)
         letterSpacing: 0.1,
     }
     const buttonsStyle = {
-        display: "block",
-        backgroundColor: "#27242575",
-        overflow: "hidden",
-        border: "none"
+        display: "inline-block",
+        fontFamily: "OpenSans",
+        marginRight: "40px",
+        fontSize: "35px",
+        textDecoration: "none",
+        lineHeight: "60px",
+        color: "black",
+        border: "1px solid black",
+        borderRadius: "10px",
+        width: "190px",
+        height: "65px",
+        backgroundColor: "transparent",
+        textAlign: "center"
     }
     const secTitle = {
         ...initialStyles,
@@ -58,7 +67,7 @@ const [isClicked, setIsClicked] = useState(false)
 
         <Html position={[0.8, -0.6, 0]} scale={[0.1,0.1,0.1]} rotation={[0, 0, 0]} transform >
           <button onClick={() => setIsClicked(prev => !prev)} style={buttonsStyle}>
-            Click Me, please
+            Click Me!
           </button>
         </Html>
 

@@ -36,7 +36,7 @@ function Overlay() {
                 <ol>
                   <li>After loaded <strong> click the left button </strong> of your mouse into the screen</li>
                   <li>To move yourself use the <strong> "W", "S", "A", "D", </strong> buttons on your keyboard</li>
-                  <li>To get out of control mood and check aother link click <strong>"ESC"</strong> escape on your keyboard</li>
+                  <li>To get out of control mood and check some links click <strong>"ESC"</strong> escape on your keyboard</li>
                   <li>Enjoy !</li>
                 </ol>
             </div>

@@ -154,6 +154,7 @@ body,
     font-weight: normal;
     font-size: 60px;
     margin: 10px;
+    transform: translate(0, -2px);
   }
   .earthIcon {
     background-image: url(./icons/earth.svg);
@@ -165,7 +166,6 @@ body,
     width: 50px;
     height: 50px;
     background-repeat: no-repeat;
-    transform: translate(0, 2px);
   }
   
   .mainContent {
