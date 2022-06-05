@@ -67,7 +67,7 @@ setTimeout(() => {
                   <div className={classes.stylesLoader}>
                   <i className={classes.earthIcon}/>
                   <div>Creating SGWorld...</div>
-                  <div>just a second, please...</div>
+                  <div>The only limit is Our imagination...</div>
                   <div className={classes.stylesPercentage} >{Math.floor(progress)}%</div>
             </div>
     }

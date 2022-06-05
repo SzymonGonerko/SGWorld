@@ -12,7 +12,7 @@
   }
   100% {
     height: 60px;
-    width: 150px;
+    width: 170px;
   }
 }
 
@@ -57,134 +57,230 @@ body,
   overflow: hidden;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  height: 80px;
-  border-bottom: 2px solid black;
-  box-shadow: 8px 8px 24px -16px rgba(0, 0, 0, 1);
-}
-.logo {
-  padding: 0 0 0 20px;
-  letter-spacing: 2px;
-  font-weight: normal;
-  font-size: 60px;
-  margin: 10px;
-}
-.earthIcon {
-  background-image: url(./icons/earth.svg);
-  background-size: contain;
-  padding: 0 0 0 0;
-  margin-left: 25px;
-  background-position: center;
-  display: block;
-  width: 50px;
-  height: 50px;
-  background-repeat: no-repeat;
-  transform: translate(0, 2px);
+@media (max-width: 999.99px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid black;
+    box-shadow: 8px 8px 24px -16px rgba(0, 0, 0, 1);
+  }
+  .logo {
+    letter-spacing: 2px;
+    font-weight: normal;
+    font-size: 60px;
+    margin: 10px;
+  }
+  .earthIcon {
+    background-image: url(./icons/earth.svg);
+    background-size: contain;
+    padding: 0 0 0 0;
+    margin-top: 20px;
+    background-position: center;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    transform: translate(0, 20px);
+  }
+  
+  .mainContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 80px);
+  }
+  .mobileVersion {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+
+  .mobileVersion .iconDesktop {
+    display: block;
+    background-image: url(./icons/desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 90px;
+    height: 90px;
+  }
+
+  .mobileVersion p {
+    font-size: 25px;
+    text-align: center;
+  }
+  
+  .mainContent .firstContainer {
+    display: none;
+  }
+  
+  .mainContent .secContainer {
+    display: none;
+  }
+
+  
+  .copyright {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+  }
+  
 }
 
-.mainContent {
+
+
+
+
+
+
+
+
+@media (min-width: 1000px) {
+  .header {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    border-bottom: 2px solid black;
+    box-shadow: 8px 8px 24px -16px rgba(0, 0, 0, 1);
+  }
+  .logo {
+    padding: 0 0 0 20px;
+    letter-spacing: 2px;
+    font-weight: normal;
+    font-size: 60px;
+    margin: 10px;
+  }
+  .earthIcon {
+    background-image: url(./icons/earth.svg);
+    background-size: contain;
+    padding: 0 0 0 0;
+    margin-left: 25px;
+    background-position: center;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    transform: translate(0, 2px);
+  }
+  
+  .mainContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 80px);
+    
+  }
+
+  .mainContent .mobileVersion {
+    display: none;
+  }
+  
+  .mainContent .firstContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 45%;
+    gap: 50px;
+  }
+  
+  .mainContent .secContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    width: 35%;
+  }
+  
+  .mainContent .secContainer .knockKnock {
+    font-weight: normal;
+    font-size: 30px;
+  }
+  
+  .mainContent .secContainer .btnEnter {
+    display: block;
+    width: 0;
+    height: 0;
+    font-weight: normal;
+    font-size: 30px;
+    border: 2px solid black;
+    background-color: white;
+    line-height: 57px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    text-transform: uppercase;
+    animation: show 0.3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    transition: 0.3s;
+  }
+  
+  .mainContent .secContainer .btnEnter:hover {
+    transform: scale(1.03);
+  }
+  .mainContent .secContainer .btnEnter i.enterIcon {
+    display: inline-block;
+    background-image: url(./icons/enter.svg);
+    width: 23px;
+    height: 23px;
+    margin-right: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .mainContent .firstContainer .welcome h2 {
+    font-weight: normal;
+    font-size: 45px;
+  }
+  .mainContent .firstContainer .welcome p {
+    font-weight: normal;
+    font-size: 30px;
+  }
+  
+  .mainContent .firstContainer .controls h2 {
+    font-weight: normal;
+    font-size: 40px;
+  }
+  
+  .mainContent .firstContainer .controls .wrapperKeyboard {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
   width: 100%;
-  height: calc(100vh - 80px);
-}
-
-.mainContent .firstContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 100%;
-  width: 45%;
-}
-
-.mainContent .secContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  align-items: center;
-  width: 35%;
-}
-
-.mainContent .secContainer .knockKnock {
-  font-weight: normal;
-  font-size: 30px;
-}
-
-.mainContent .secContainer .btnEnter {
-  display: block;
-  width: 0;
-  height: 0;
-  font-weight: normal;
-  font-size: 30px;
-  border: 1px solid black;
-  background-color: #0dff0052;
-  overflow: hidden;
-  cursor: pointer;
-  border-radius: 10px;
-  text-transform: uppercase;
-  animation: show 0.3s;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-  transition: 0.3s;
-}
-
-.mainContent .secContainer .btnEnter:hover {
-  background-color: #0dff0089;
-}
-
-
-.mainContent .firstContainer .welcome h2 {
-  font-weight: normal;
-  font-size: 45px;
-}
-.mainContent .firstContainer .welcome p {
-  font-weight: normal;
-  font-size: 30px;
-}
-
-.mainContent .firstContainer .controls h2 {
-  font-weight: normal;
-  font-size: 40px;
-}
-
-.mainContent .firstContainer .controls .wrapperKeyboard {
-display: flex;
-width: 100%;
-justify-content: space-between;
-}
-.mainContent .firstContainer .controls .wrapperKeyboard div {
-  background-image: url(./icons/keyboard.jpg);
+  justify-content: space-between;
+  }
+  .mainContent .firstContainer .controls .wrapperKeyboard div {
+    background-image: url(./icons/keyboard.jpg);
+    width: 49%;
+    height: 250px;
+    border-radius: 10px;
+    opacity: 0.5;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+  
+    .mainContent .firstContainer .controls .wrapperKeyboard ol {
   width: 49%;
-  height: 250px;
-  border-radius: 10px;
-  opacity: 0.5;
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: cover;
+  margin-left: 30px;
+    }
+  
+    .mainContent .firstContainer .controls .wrapperKeyboard ol li {
+      font-size: 22px;
+    }
+  
+  .copyright {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
   }
-
-  .mainContent .firstContainer .controls .wrapperKeyboard ol {
-width: 49%;
-margin-left: 30px;
-  }
-
-  .mainContent .firstContainer .controls .wrapperKeyboard ol li {
-    font-size: 22px;
-  }
-
-
-
-
-
-
-
-
-.copyright {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
 }
+
