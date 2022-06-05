@@ -49,14 +49,15 @@ if (progress === 100) {
 }
 
 if (counter >= 2) {
-  
   setTimeout(() => {
     setIsFinish(true)
-  }, 4500)
-
-
-
+  }, 3500)
 }
+
+setTimeout(() => {
+  setIsFinish(true)
+}, 10000)
+
   }, [progress])
 
  
@@ -65,8 +66,8 @@ if (counter >= 2) {
     {!isFinish &&
                   <div className={classes.stylesLoader}>
                   <i className={classes.earthIcon}/>
-                  <div>Creating World...for You</div>
-                  <div>Just a second, please</div>
+                  <div>Creating SGWorld...</div>
+                  <div>just a second, please...</div>
                   <div className={classes.stylesPercentage} >{Math.floor(progress)}%</div>
             </div>
     }

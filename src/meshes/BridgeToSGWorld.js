@@ -1,7 +1,7 @@
 import React from "react";
 import { useBox } from "@react-three/cannon";
 
-export const BridgeToHelloWorld = (props) => {
+export const BridgeToSGWorld = (props) => {
   const [cubeRef] = useBox(() => ({
     rotation: [-90.4, 0, 89.57],
     mass: 1000,

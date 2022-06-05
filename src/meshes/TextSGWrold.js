@@ -4,7 +4,7 @@ import { Html } from "@react-three/drei";
 
 
 
-export const TextHelloWorld = () => {
+export const TextSGWrold = () => {
     const initialStyles = {
       fontFamily: "Ava",
       color: "red",
@@ -14,13 +14,13 @@ export const TextHelloWorld = () => {
 
     return (<>
 
-        <Html position={[5, 15, 0]} scale={[0.1,0.1,0.1]} rotation={[Math.PI, 0, Math.PI / 1]} transform >
+        <Html position={[4, 15, 0]} scale={[0.1,0.1,0.1]} rotation={[Math.PI, 0, Math.PI / 1]} transform >
           <div style={initialStyles}>
-            Hello
+            SG
           </div>
         </Html>
 
-        <Html position={[-5, 15, 0]} scale={[0.1,0.1,0.1]} rotation={[Math.PI, 0, Math.PI / 1]} transform >
+        <Html position={[-4, 15, 0]} scale={[0.1,0.1,0.1]} rotation={[Math.PI, 0, Math.PI / 1]} transform >
           <div style={initialStyles}>
             World
           </div>

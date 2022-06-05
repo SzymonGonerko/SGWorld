@@ -24,11 +24,11 @@ import { TextGreatPossibility } from "./meshes/TextGreatPossibility";
 import { TextContactWithMe } from "./meshes/TextContactWithMe";
 import { TextPaint } from "./meshes/TextPaint"
 import { TextLicences } from "./meshes/TextLicences";
-import { TextHelloWorld } from "./meshes/TextHelloWorld"
+import { TextSGWrold } from "./meshes/TextSGWrold"
 import { TextWelcomeInGarden } from "./meshes/TextWelcomeInGarden"
 import { FancyMesh } from "./meshes/FancyMesh"
-import { BridgeToHelloWorld } from "./meshes/BridgeToHelloWorld"
-import { FloorInFrontOfHelloWorld } from "./meshes/FloorInFrontOfHelloWorld"
+import { BridgeToSGWorld } from "./meshes/BridgeToSGWorld"
+import { FloorInFrontOfSGWorld } from "./meshes/FloorInFrontOfSGWorld"
 
 import LightsToFavourite from "../src/lights/LightsToFavourite"
 import LightToPaint from "../src/lights/LightToPaint"
@@ -84,7 +84,7 @@ export default function App() {
       <Stars radius={100} depth={50} count={5000} factor={4} saturation={1} fade speed={1} />
       <color attach="background" args={['#040811']} />
 
-      <pointLight castShadow intensity={0.11} position={[0, 1, -5]} />
+      <pointLight castShadow intensity={0.18} position={[0, 1, -5]} />
       <Physics gravity={[0, -30, 0]}>
         
         <Player />
@@ -150,7 +150,7 @@ export default function App() {
 
 {/*  ----------------GARDEN---------------- */}
 
-        <TextHelloWorld/>
+        <TextSGWrold/>
         <TextWelcomeInGarden/>
 
         <Tree position={[4, -2, -23]}/>
@@ -174,8 +174,8 @@ export default function App() {
         </Sphere>
 
         <SpotLightInGarden color={"white"} objectPosition={["1", "40", "-15"]} lightPos={["-2", "12", "0"]} />
-        <FloorInFrontOfHelloWorld position={[1.8, 11, -2]} type={"Static"}/>
-        <BridgeToHelloWorld position={[-6, 4.5, -9]} type={"Static"}/>
+        <FloorInFrontOfSGWorld position={[-0.8, 11, -2]} type={"Static"}/>
+        <BridgeToSGWorld position={[-6, 4.5, -9]} type={"Static"}/>
 
 
 

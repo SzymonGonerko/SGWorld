@@ -33,7 +33,6 @@ export const VanillaDate = () => {
       padding: "10px",
       fontFamily: "OpenSans",
       backgroundColor: "transparent",
-      boxShadow: "0px 0px 24px 0px rgba(137, 28, 129, 1)",
       color: "black",
       font: "arial",
       transform: "translate(15%, 14%)",
