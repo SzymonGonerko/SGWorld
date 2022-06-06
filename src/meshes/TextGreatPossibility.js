@@ -57,7 +57,7 @@ const [isClicked, setIsClicked] = useState(false)
     <group position={[-3.36, 1.2, 2.4]} rotation={[0, Math.PI / 2, 0]}>
         <group position={[-0.49, 0.1, 0]}>
             <Text {...firstTitle} text={"{REACT && CANVAS}"} position={[0, 0.77, 0]}/>
-            <Text {...secTitle} text={"GREAT POSSIBILITY"} position={[-0.07, 0.55, 0]}/>
+            <Text {...secTitle} text={"GREAT POSSIBILITY"} position={[-0.01, 0.55, 0]}/>
         </group>
 
         <group position={[-0.1, -0.7, 0]}>
@@ -66,9 +66,9 @@ const [isClicked, setIsClicked] = useState(false)
         </group>
 
         <Html position={[0.8, -0.6, 0]} scale={[0.1,0.1,0.1]} rotation={[0, 0, 0]} transform >
-          <button onClick={() => setIsClicked(prev => !prev)} style={buttonsStyle}>
+          <a onClick={() => setIsClicked(prev => !prev)} style={buttonsStyle}>
             Click Me!
-          </button>
+          </a>
         </Html>
 
     </group>);

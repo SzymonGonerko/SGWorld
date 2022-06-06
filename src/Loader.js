@@ -39,7 +39,7 @@ const styles = {
 
 
 const Box = ({classes}) => {
-  const {active, progress, item, loaded, total} = useProgress()
+  const {progress} = useProgress()
   const [counter, setCounter] = useState(0)
   const [isFinish, setIsFinish] = useState(false)
 
@@ -67,7 +67,7 @@ setTimeout(() => {
                   <div className={classes.stylesLoader}>
                   <i className={classes.earthIcon}/>
                   <div>Loading SGWorld...</div>
-                  <div style={{color: "#289393"}}><strong>The only limit is Our imagination...</strong></div>
+                  <div style={{color: "#289393"}}><strong>The only limit is Your imagination...</strong></div>
                   <div className={classes.stylesPercentage} >{Math.floor(progress)}%</div>
             </div>
     }

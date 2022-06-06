@@ -45,7 +45,7 @@ function Overlay() {
             </div>
           </div>
           <div className="secContainer">
-            <a className="btnEnter" onClick={() => setIsReady(true)}><i className="enterIcon"/><strong> enter SGWorld</strong> </a>
+            <a className="btnEnter" onClick={() => setIsReady(true)}><i className="enterIcon"/><strong> enter</strong> </a>
           </div>
           <div className="copyright">SGWorld&#169; created by Szymon Gonerko. All rights reserved</div>
         </main>

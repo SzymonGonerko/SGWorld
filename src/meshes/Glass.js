@@ -17,7 +17,7 @@ export const Glass = (props) => {
   return (
     <mesh ref={cubeRef} castShadow layers={props.layers}>
       <boxBufferGeometry args={[1.16, 1.9, 0.01]} />
-      <meshStandardMaterial transparent opacity={0.3} roughness={0} color="white" />
+      <meshStandardMaterial transparent opacity={0.4} roughness={0} color="white" />
     </mesh>
   );
 };

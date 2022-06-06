@@ -11,7 +11,7 @@ const LightToPhoto = ({ vec = new Vector3() }) => {
       light.current.target.position.lerp(vec.set(-0.7, 1, 6.89), 0.1)
       light.current.target.updateMatrixWorld()
     })
-    return <SpotLight position={[1, 2.6, 4.9]}  ref={light} penumbra={1} distance={6} angle={0.25} attenuation={1} anglePower={2} intensity={1} />
+    return <SpotLight position={[1, 2.6, 4.9]}  ref={light} penumbra={1} distance={6} angle={0.23} attenuation={1} anglePower={2} intensity={1} />
   }
 
   export default LightToPhoto

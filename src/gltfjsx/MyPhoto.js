@@ -10,7 +10,7 @@ export default function Model({ ...props }) {
   const group = useRef()
   const { nodes, materials } = useGLTF(url)
   return (
-    <group scale={[0.4, 0.4, 0.4]} rotation={[Math.PI/2, Math.PI/2, Math.PI / 1]} ref={group} {...props} dispose={null}>
+    <group scale={[0.3, 0.3, 0.3]} rotation={[Math.PI/2, Math.PI/2, Math.PI / 1]} ref={group} {...props} dispose={null}>
       <mesh geometry={nodes.Cube.geometry} material={materials.Material} scale={[1.32, 0.01, 1.8]} />
     </group>
   )

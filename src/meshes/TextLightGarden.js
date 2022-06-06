@@ -44,7 +44,7 @@ export const TextLightGarden = () => {
         </group>
 
         <Html position={[3, 0.8, -21]} scale={[0.1,0.1,0.1]} rotation={[0, -Math.PI / 2, 0]}  transform >
-            <a style={anchorStyles} href="https://pik.wroclaw.pl/zaczarowany-ogrod-we-wroclawiu/" target="_blank">
+            <a style={anchorStyles} href="https://gazetawroclawska.pl/wroclaw-zaczarowany-ogrod-w-parku-staromiejskim-juz-otwarty-dla-zwiedzajacych-zdjecia/ar/c1-14655943" target="_blank">
                 Click LightGarden in Wroclaw
             </a>
         </Html>
