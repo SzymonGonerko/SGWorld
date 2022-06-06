@@ -45,7 +45,7 @@ export const TextFavouriteThings = () => {
     const textPassion = {
         ...initialStyles,
         fontSize: 0.05,
-        letterSpacing: 0.07,
+        letterSpacing: 0.03,
         maxWidth: 0.8,
         textAlign: "justify"
     }
@@ -76,14 +76,14 @@ export const TextFavouriteThings = () => {
                 <Text {...verticalTitle} text={"MY"} position={[-0.51, 0.69, 0]} rotation={[0, 0, -Math.PI /2]}/>
                 <Text {...title} text={"THINGS"} position={[-0.1, 0.6, 0]}/>
             </group>
-            <group position={[-0.9, 0.28, 0]}>
+            <group position={[0, 0.28, 0]}>
                 <Text {...textAuthor} text={"Markus Zusak,"} position={[0, 0, 0]}/>
                 <Text {...textTitle} text={'"The Book Thief"'} position={[-0.01, -0.11, 0]}/>
                 <Text {...textPlot} text={plotOfTheBookThief} position={[-0.01, -0.45, 0]}/>
             </group>
-            <group position={[0, 0.28, 0 ]}>
-                <Text {...textLaptop} text={"<main>Laptop</main>"} position={[0, 0, 0]}/>
-                <Text {...textPassion} text={passion} position={[-0.01, -0.346, 0]}/>
+            <group position={[-0.9, 0.28, 0 ]}>
+                <Text {...textLaptop} text={"Laptop"} position={[-0.28, 0, 0]}/>
+                <Text {...textPassion} text={passion} position={[-0.01, -0.22, 0]}/>
             </group>
             <group position={[0.9, 0.28, 0]}>
                 <Text {...textKalimba} text={"Kalimba"} position={[0, 0, 0]}/>

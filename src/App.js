@@ -27,8 +27,6 @@ import { TextLicences } from "./meshes/TextLicences";
 import { TextSGWorld } from "./meshes/TextSGWorld"
 import { TextLightGarden } from "./meshes/TextLightGarden"
 import { FancyMesh } from "./meshes/FancyMesh"
-import { BridgeToSGWorld } from "./meshes/BridgeToSGWorld"
-import { FloorInFrontOfSGWorld } from "./meshes/FloorInFrontOfSGWorld"
 
 
 import LightToPhoto from "./lights/LightToPhoto";
@@ -54,17 +52,9 @@ import {Sphere} from "@react-three/drei";
 
 import Paint from "./gltfjsx/Paint"
 import FrontWindows from "./gltfjsx/FrontWindows"
-import Kalimba from "./gltfjsx/Kalimba"
-import Table from "./gltfjsx/Table"
-import Book from "./gltfjsx/Book"
-import Laptop from "./gltfjsx/Laptop"
 import Stereo from "./gltfjsx/Stereo"
-import Chair from "./gltfjsx/Chair"
-import Door from "./gltfjsx/Door"
 import Tree from "./gltfjsx/Tree"
-
 import MyPhoto from "./gltfjsx/MyPhoto"
-
 import WhiteBlackMe from "./gltfjsx/WhiteBlackMe"
 
 
@@ -81,14 +71,14 @@ export default function App() {
     <Suspense fallback={null}>
         <group position={[3.2, 0, 2.5]}>
           <Stereo position={[0, 0, 0]}/>
-          <PositionalAudio setVolume={"0.1"} autoplay loop url={music} distance={2} />
+          <PositionalAudio autoplay loop url={music} distance={2} />
         </group>
 
 
       <Stars radius={100} depth={50} count={5000} factor={4} saturation={1} fade speed={1} />
       <color attach="background" args={['#040811']} />
 
-      <pointLight castShadow intensity={0.12} position={[0, 1, -5]} />
+      <pointLight castShadow intensity={0.17} position={[0, 1.8, -5]} />
       <Physics gravity={[0, -30, 0]}>
         
         <Player />
@@ -110,10 +100,6 @@ export default function App() {
 
         <LightsToFavourite/>
         <TextFavouriteThings/>
-        <Table position={[-2.9, 0, -9]}/>
-        <Book position={[-2.8, 0.52, -8.7]}/>
-        <Kalimba position={[ -2.8, 0.52, -9.4 ]}/>
-        <Laptop position={[-2.8, 0.52, -9.1]}/>
 
 
 
@@ -136,12 +122,10 @@ export default function App() {
      
 
      
-     <Chair position={[-2, 0, -8]}/>
-     <Chair position={[-2.3, 0, -9.6]} rotation={[0, Math.PI / 3, 0]} />
 
      <MovingSpotLights/>
     <WhiteBlackMe rotation={[0, Math.PI / 1.7, 0]} position={[-2.8, 0, 4.9]}/>
-    <Door position={[-2.6, 0, 6.95]}/>
+
 
     <TextWhereWhoAmI/>
     <LightToWhoAmI/>
@@ -160,8 +144,6 @@ export default function App() {
         <TextLightGarden/>
 
         <Tree position={[4, -2, -23]}/>
-        <Tree position={[-3, -2, -23]}/>
-        <Tree position={[1, 0, -30]}/>
 
 
         <SpotLightInGarden color={"red"} objectPosition={["2.7", "3", "-23"]} lightPos={["2.3", "1.2", "-23"]} />
@@ -174,14 +156,6 @@ export default function App() {
           <FancyMesh color={"blue"}/>
         </Sphere>
 
-        <SpotLightInGarden color={"green"} objectPosition={["1", "40", "-15"]} lightPos={["-3", "0.5", "-25"]} />
-        <Sphere visible position={[-3, 3, -25]} args={[0.3, 16, 200]}>
-          <FancyMesh color={"green"}/>
-        </Sphere>
-
-        <SpotLightInGarden color={"white"} objectPosition={["1", "40", "-15"]} lightPos={["-2", "12", "0"]} />
-        <FloorInFrontOfSGWorld position={[-0.8, 11, -2.5]} type={"Static"}/>
-        <BridgeToSGWorld position={[-6.5, 4.5, -9]} type={"Static"}/>
 
 
 
