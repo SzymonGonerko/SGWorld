@@ -30,6 +30,8 @@ import { FancyMesh } from "./meshes/FancyMesh"
 import { BridgeToSGWorld } from "./meshes/BridgeToSGWorld"
 import { FloorInFrontOfSGWorld } from "./meshes/FloorInFrontOfSGWorld"
 
+
+import LightToPhoto from "./lights/LightToPhoto";
 import LightsToFavourite from "../src/lights/LightsToFavourite"
 import LightToPaint from "../src/lights/LightToPaint"
 import LightToSkills from "../src/lights/LightToSkills"
@@ -61,7 +63,7 @@ import Chair from "./gltfjsx/Chair"
 import Door from "./gltfjsx/Door"
 import Tree from "./gltfjsx/Tree"
 
-import Me from "./gltfjsx/Me"
+import MyPhoto from "./gltfjsx/MyPhoto"
 
 import WhiteBlackMe from "./gltfjsx/WhiteBlackMe"
 
@@ -90,9 +92,9 @@ export default function App() {
       <Physics gravity={[0, -30, 0]}>
         
         <Player />
-<ambientLight intensity={0.1}/>
 
-<Me position={[-0.7, 1, 6.89]}/>
+      <MyPhoto position={[-0.7, 1, 6.9]}/>
+      <LightToPhoto/>
 
         <LightToPaint/>
         <Paint />

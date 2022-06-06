@@ -14,13 +14,13 @@ export const TextSGWorld = () => {
 
     return (<>
 
-        <Html position={[4, 15, 0]} scale={[0.1,0.1,0.1]} rotation={[Math.PI, 0, Math.PI / 1]} transform >
+        <Html position={[3, 15, 0]} scale={[0.1,0.1,0.1]} rotation={[Math.PI, 0, Math.PI / 1]} transform >
           <div style={initialStyles}>
             SG
           </div>
         </Html>
 
-        <Html position={[-4, 15, 0]} scale={[0.1,0.1,0.1]} rotation={[Math.PI, 0, Math.PI / 1]} transform >
+        <Html position={[-3, 15, 0]} scale={[0.1,0.1,0.1]} rotation={[Math.PI, 0, Math.PI / 1]} transform >
           <div style={initialStyles}>
             World
           </div>

@@ -24,7 +24,7 @@ export const TextLicences = () => {
 
     return (
     <group position={[1.5, 1.5, 6.89]} rotation={[Math.PI, 0, Math.PI / 1]}>
-        <group position={[-1, -0.3, 0]}>
+        <group position={[-1.21, -0.25, 0]}>
             <Text {...title} text={"LICENCES"} position={[0, 0.7, 0]}/>
         </group>
 
