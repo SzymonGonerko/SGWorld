@@ -19,15 +19,15 @@ function Overlay() {
           <div className="mobileVersion">
             <i className="iconDesktop"/>
             <p>
-              The project SGWorld does not support the mobile device. This app requires a access to keyboard and mouse to control virtual reality. Please, use your laptop or PC
+              The project SGWorld does not support the mobile device. This app requires a access to keyboard and mouse to control virtual reality. Please, use your laptop or PC.
             </p>
           </div>
 
 
           <div className="firstContainer">
             <div className="welcome">
-              <h2>Welcome</h2>
-              <p>Welcome to the SGWorld project. I'm glad you are here! Before we start, check the control system, please.</p>
+              <h2>Hello !</h2>
+              <p>Welcome to the SGWorld project. I'm glad you are here! Before we start, check the controls.</p>
             </div>
             <div className="controls">
               <h2>Controls</h2>
@@ -45,8 +45,7 @@ function Overlay() {
             </div>
           </div>
           <div className="secContainer">
-            <p className="knockKnock">knock...  knock...</p>
-            <a className="btnEnter" onClick={() => setIsReady(true)}><i className="enterIcon"/><strong>come in !</strong></a>
+            <a className="btnEnter" onClick={() => setIsReady(true)}><i className="enterIcon"/><strong> enter SGWorld</strong> </a>
           </div>
           <div className="copyright">SGWorld&#169; created by Szymon Gonerko. All rights reserved</div>
         </main>

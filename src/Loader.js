@@ -16,7 +16,7 @@ const styles = {
     alignItems: "center",
     height: "100vh",
     fontFamily: "OpenSans",
-    fontSize: "50px",
+    fontSize: "55px",
     letterSpacing: "2px",
   },
  stylesPercentage: {
@@ -66,8 +66,8 @@ setTimeout(() => {
     {!isFinish &&
                   <div className={classes.stylesLoader}>
                   <i className={classes.earthIcon}/>
-                  <div>Creating SGWorld...</div>
-                  <div>The only limit is Our imagination...</div>
+                  <div>Loading SGWorld...</div>
+                  <div style={{color: "#289393"}}><strong>The only limit is Our imagination...</strong></div>
                   <div className={classes.stylesPercentage} >{Math.floor(progress)}%</div>
             </div>
     }

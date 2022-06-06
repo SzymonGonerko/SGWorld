@@ -62,11 +62,11 @@ const MovingSpotLights = ({ vec = new Vector3() }) => {
   </Sphere>
 
   <Sphere ref={secondSphere} position={[-2.9, 1.15, 5.1]} args={[0.009, 16, 200]}>
-      <SpotLight ref={secondLight} color="lightblue" position={[0, 0, 0]} penumbra={1} distance={6} angle={0.40} attenuation={0.1} anglePower={2} intensity={0.5} />
+      <SpotLight ref={secondLight} color="#89d1fe" position={[0, 0, 0]} penumbra={1} distance={6} angle={0.40} attenuation={0.1} anglePower={2} intensity={0.5} />
       <MeshWobbleMaterial
         attach="material"
-        color="lightblue"
-        emissive="lightblue"
+        color="#89d1fe"
+        emissive="#89d1fe"
         factor={5}
         speed={0}
         roughness={0}

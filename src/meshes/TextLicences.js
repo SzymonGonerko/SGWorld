@@ -59,7 +59,11 @@ export const TextLicences = () => {
                     <a target="_blank" href="https://sketchfab.com/3d-models/door-with-frame-2f2f149f3ec44d658a02c1f924dfa449">link</a>
                 </li>
                 <li style={liStyle}>
-                    Music FKJ - Just Piano In partnership with Calm, available at
+                    File Tree.js uses Tree.glb - no modyficated -  base on CC BY 4.0, object available at
+                    <a target="_blank" href="https://sketchfab.com/3d-models/jungle-tree-46f83ec5f6c04abf9d509c1070f67d1e">link</a>
+                </li>
+                <li style={liStyle}>
+                    Music "FKJ - Just Piano (In partnership with Calm)" - no information about copyright from the author -  available at
                     <a target="_blank" href="https://www.youtube.com/watch?v=AmmFD2OIs_k">link</a>
                 </li>
             </ul>

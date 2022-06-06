@@ -6,7 +6,6 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import url from "../objects/WhiteBlackMe.glb"
 
-// scale={[0.701, 0.701, 0.701]}
 export default function Model({ ...props }) {
   const group = useRef()
   const { nodes, materials } = useGLTF(url)

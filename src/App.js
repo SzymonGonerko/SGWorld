@@ -11,7 +11,7 @@ import Loader from './Loader'
 
 
 import { BackWall } from "./meshes/BackWall"
-import { FrontWall } from "./meshes/FrontWall"
+import { Glass } from "./meshes/Glass"
 import { LeftWall } from "./meshes/LeftWall"
 import { RightWall } from "./meshes/RightWall"
 import { Ceiling } from "./meshes/Ceiling"
@@ -24,8 +24,8 @@ import { TextGreatPossibility } from "./meshes/TextGreatPossibility";
 import { TextContactWithMe } from "./meshes/TextContactWithMe";
 import { TextPaint } from "./meshes/TextPaint"
 import { TextLicences } from "./meshes/TextLicences";
-import { TextSGWrold } from "./meshes/TextSGWrold"
-import { TextWelcomeInGarden } from "./meshes/TextWelcomeInGarden"
+import { TextSGWorld } from "./meshes/TextSGWorld"
+import { TextLightGarden } from "./meshes/TextLightGarden"
 import { FancyMesh } from "./meshes/FancyMesh"
 import { BridgeToSGWorld } from "./meshes/BridgeToSGWorld"
 import { FloorInFrontOfSGWorld } from "./meshes/FloorInFrontOfSGWorld"
@@ -61,6 +61,8 @@ import Chair from "./gltfjsx/Chair"
 import Door from "./gltfjsx/Door"
 import Tree from "./gltfjsx/Tree"
 
+import Me from "./gltfjsx/Me"
+
 import WhiteBlackMe from "./gltfjsx/WhiteBlackMe"
 
 
@@ -75,7 +77,7 @@ export default function App() {
 
     <Canvas shadows gl={{ alpha: false }} camera={{ fov: 45 }}>
     <Suspense fallback={null}>
-    <group position={[3.2, 0, 2.5]}>
+        <group position={[3.2, 0, 2.5]}>
           <Stereo position={[0, 0, 0]}/>
           <PositionalAudio setVolume={"0.1"} autoplay loop url={music} distance={2} />
         </group>
@@ -84,12 +86,13 @@ export default function App() {
       <Stars radius={100} depth={50} count={5000} factor={4} saturation={1} fade speed={1} />
       <color attach="background" args={['#040811']} />
 
-      <pointLight castShadow intensity={0.18} position={[0, 1, -5]} />
+      <pointLight castShadow intensity={0.12} position={[0, 1, -5]} />
       <Physics gravity={[0, -30, 0]}>
         
         <Player />
+<ambientLight intensity={0.1}/>
 
-
+<Me position={[-0.7, 1, 6.89]}/>
 
         <LightToPaint/>
         <Paint />
@@ -121,8 +124,9 @@ export default function App() {
         <Ceiling position={[0, 2.6, -3]} type={"Static"}/>
         <FrontWindows position={[0.45, 0, -13.5]}/>
 
-        <FrontWall position={[-2, 1.3, -13.65]} type={"Static"}/>
-        <FrontWall position={[3.5, 1.3, -13.65]} type={"Static"}/>
+        <Glass position={[-2.6, 1.24, -13.45]} type={"Static"}/>
+        <Glass position={[-0.87, 1.24, -13.45]} type={"Static"}/>
+        <Glass position={[2.58, 1.24, -13.45]} type={"Static"}/>
         <RightWall position={[3.5, 1, -3]} type={"Static"}/>
         <LeftWall position={[-3.5, 1, -3]} type={"Static"} />
         <BackWall position={[0, 1, 7]} type={"Static"} />
@@ -150,8 +154,8 @@ export default function App() {
 
 {/*  ----------------GARDEN---------------- */}
 
-        <TextSGWrold/>
-        <TextWelcomeInGarden/>
+        <TextSGWorld/>
+        <TextLightGarden/>
 
         <Tree position={[4, -2, -23]}/>
         <Tree position={[-3, -2, -23]}/>
@@ -174,8 +178,8 @@ export default function App() {
         </Sphere>
 
         <SpotLightInGarden color={"white"} objectPosition={["1", "40", "-15"]} lightPos={["-2", "12", "0"]} />
-        <FloorInFrontOfSGWorld position={[-0.8, 11, -2]} type={"Static"}/>
-        <BridgeToSGWorld position={[-6, 4.5, -9]} type={"Static"}/>
+        <FloorInFrontOfSGWorld position={[-0.8, 11, -2.5]} type={"Static"}/>
+        <BridgeToSGWorld position={[-6.5, 4.5, -9]} type={"Static"}/>
 
 
 

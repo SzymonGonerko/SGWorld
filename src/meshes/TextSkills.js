@@ -43,7 +43,7 @@ export const TextSkills = () => {
             <Text {...defaultText} text={"- BLENDER (current project)"} position={[0.278, -0.56, 0]}/>
             <Text {...defaultText} text={"- GIT"} position={[-0.17, -0.70, 0]}/>
         </group>
-        <group position={[1.3, -0.7, 0]}>
+        <group position={[1.4, -0.9, 0]}>
             <Text {...initialStyles} text={"IDE"}  position={[-0.09, 0.7, 0]}/>
             <Text {...defaultText} text={"- VISUAL STUDIO CODE (current editor)"} position={[0.6, 0.54, 0]}/>
             <Text {...defaultText} text={"- WEBSTORM"} position={[ 0.097, 0.4, 0]}/>
