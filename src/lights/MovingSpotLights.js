@@ -20,10 +20,10 @@ const MovingSpotLights = ({ vec = new Vector3() }) => {
 
 
     useFrame(() => {
-      firstLight.current.target.position.lerp(vec.set(-2.75, 1, 4.9), 0.1)
+      firstLight.current.target.position.lerp(vec.set(-2.74, 1, 4.9), 0.1)
       firstLight.current.target.updateMatrixWorld()
 
-      secondLight.current.target.position.lerp(vec.set(-2.75, 1, 5.2), 0.1)
+      secondLight.current.target.position.lerp(vec.set(-2.74, 1, 5.2), 0.1)
       secondLight.current.target.updateMatrixWorld()
 
         let time = Date.now() * 15

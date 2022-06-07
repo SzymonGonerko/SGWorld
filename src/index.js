@@ -11,11 +11,16 @@ function Overlay() {
 <>
       {isReady && <App/>}
       
-      <header className="header">
-        <i className="earthIcon"/>
-        <h1 className="logo">SGWorld</h1>
-      </header>
+
         <main className="mainContent">
+
+
+          <header className="header">
+            <i className="earthIcon"/>
+            <h1 className="logo">SGWorld</h1>
+          </header>
+
+
           <div className="mobileVersion">
             <i className="iconDesktop"/>
             <p>
@@ -24,10 +29,13 @@ function Overlay() {
           </div>
 
 
+        <section className="sectionContainers">
+
+
           <div className="firstContainer">
             <div className="welcome">
               <h2>Hello !</h2>
-              <p>Welcome to the SGWorld project. I'm glad you are here! Before we start, check the controls.</p>
+              <p>Welcome to the SGWorld project. It's geometric reflection of my living space and real existing things connected with fantasise elements. Before we start, check the controls.</p>
             </div>
             <div className="controls">
               <h2>Controls</h2>
@@ -39,14 +47,19 @@ function Overlay() {
                   <li>To get out of control mood and check some links click <strong>"ESC"</strong> escape on your keyboard</li>
                   <li>Enjoy !</li>
                 </ol>
-            </div>
-              
-              
+              </div>
             </div>
           </div>
+
+
+
           <div className="secContainer">
             <a className="btnEnter" onClick={() => setIsReady(true)}><i className="enterIcon"/><strong> enter</strong> </a>
           </div>
+
+
+          </section>
+
           <div className="copyright">SGWorld&#169; created by Szymon Gonerko. All rights reserved</div>
         </main>
    

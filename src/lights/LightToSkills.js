@@ -24,10 +24,10 @@ const LightToSkills = ({ vec = new Vector3() }) => {
       lightToVanillaDate.current.target.updateMatrixWorld()
     })
     return <group position={[0, 2.6, -7]}>
-      <SpotLight position={[0, 0, 0]}  ref={lightToTech} penumbra={1} distance={10} angle={0.30} attenuation={0.8} anglePower={2} intensity={0.5} />
-      <SpotLight position={[0, 0, 0]}  ref={lightToTools} penumbra={1} distance={10} angle={0.15} attenuation={0.8} anglePower={2} intensity={0.5} />
-      <SpotLight position={[0, 0, 0]}  ref={lighttToTitle} color={"red"} penumbra={1} distance={10} angle={0.15} attenuation={0.8} anglePower={10} intensity={0.5} />
-      <SpotLight position={[0, 0, 0]}  ref={lightToVanillaDate} penumbra={1} distance={10} angle={0.25} attenuation={0.8} anglePower={2} intensity={0.8} />
+      <SpotLight position={[0, 0, 0]}  ref={lightToTech} penumbra={1} distance={10} angle={0.30} attenuation={0} anglePower={0} intensity={0.5} />
+      <SpotLight position={[0, 0, 0]}  ref={lightToTools} penumbra={1} distance={10} angle={0.15} attenuation={0} anglePower={0} intensity={0.5} />
+      <SpotLight position={[0, 0, 0]}  ref={lighttToTitle} color={"red"} penumbra={1} distance={10} angle={0.15} attenuation={0} anglePower={0} intensity={0.5} />
+      <SpotLight position={[0, 0, 0]}  ref={lightToVanillaDate} penumbra={1} distance={10} angle={0.25} attenuation={0} anglePower={0} intensity={0.7} />
     </group>
   }
 

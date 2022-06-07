@@ -11,7 +11,7 @@ const LightToWhoAmI = ({ vec = new Vector3() }) => {
       light.current.target.position.lerp(vec.set(3.99, 1.2, 1), 0.1)
       light.current.target.updateMatrixWorld()
     })
-    return <SpotLight position={[0, 2.6, -2]}  ref={light} penumbra={1} distance={8} angle={0.3} attenuation={0.8} anglePower={2} intensity={0.6} />
+    return <SpotLight position={[0, 2.6, -2]}  ref={light} penumbra={1} distance={8} angle={0.3} attenuation={0} anglePower={2} intensity={0.6} />
   }
 
   export default LightToWhoAmI
