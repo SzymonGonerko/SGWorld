@@ -1,7 +1,7 @@
 import {Text} from "@react-three/drei";
 import OpenSans from "../fonts/OpenSans.ttf"
 
-const textWhereAreWeInReality = "In a real sense, we are in my apartment in the center of Wroclaw. It's a prototype containing real objects, including myself. I wrote some of it, such as Book.js, and Paint.js. I am an author of the model of myself (WhiteBlackMe.js). Some are by other authors based on CC Attribution-ShareAlike license."
+const textWhereAreWeInReality = "In a real sense, we are in my apartment in the center of Wroclaw. It's a prototype containing real objects, including myself. I am an author of Paint.js and the model of myself (WhiteBlackMe.js). Some are by other authors based on CC Attribution-ShareAlike license."
 const textWhereAreWeInVirtual = "In a virtual sense, we are inside <canvas/>. This is a fully semantic inline-block HTML tag for any web page (you can check it in inspector dev tools). This is a unique marker because it allows you to create a 2D or 3D space that can be freely manipulated."
 const textWhereAreWeContext = "In my previous project Vanilla-Date, I used 2D space. Now, I decided to go a step forward and use the maximum potential of 3D space."
 

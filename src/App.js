@@ -27,6 +27,7 @@ import { TextLicences } from "./meshes/TextLicences";
 import { TextSGWorld } from "./meshes/TextSGWorld"
 import { TextLightGarden } from "./meshes/TextLightGarden"
 import { FancyMesh } from "./meshes/FancyMesh"
+import { TextPhoto } from "./meshes/TextPhoto";
 
 
 import LightToPhoto from "./lights/LightToPhoto";
@@ -77,12 +78,13 @@ export default function App() {
 
       <Stars radius={100} depth={50} count={5000} factor={4} saturation={1} fade speed={1} />
       <color attach="background" args={['#040811']} />
-      <pointLight castShadow intensity={0.21} position={[0, 1.8, -5]} />
+      <pointLight color={"#fffef7"} castShadow intensity={0.23} position={[0, 1.8, -5]} />
       <Physics gravity={[0, -30, 0]}>
         
         <Player />
 
       <MyPhoto position={[-0.7, 1, 6.9]}/>
+      <TextPhoto/>
       <LightToPhoto/>
 
         <LightToPaint/>
@@ -123,7 +125,7 @@ export default function App() {
      
 
      <MovingSpotLights/>
-    <WhiteBlackMe rotation={[0, Math.PI / 1.7, 0]} position={[-2.75, 0, 4.9]}/>
+    <WhiteBlackMe rotation={[0, Math.PI / 1.7, 0]} position={[-2.79, 0, 4.9]}/>
 
 
     <TextWhereWhoAmI/>

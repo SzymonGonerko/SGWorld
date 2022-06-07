@@ -51,7 +51,7 @@ if (progress === 100) {
 if (counter >= 2) {
   setTimeout(() => {
     setIsFinish(true)
-  }, 6000)
+  }, 8000)
 }
 
 setTimeout(() => {
