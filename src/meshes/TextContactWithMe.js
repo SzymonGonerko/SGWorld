@@ -13,8 +13,6 @@ import Szymon_Gonerko_CV from "../cv/Szymon_Gonerko_CV.pdf"
 
 const textWhatCanIDoo = "I'm pleased that you visited me, if you think that we can establish a valuable cooperation, please contact me ..."
 
-export const TextContactWithMe = () => {
-
 const initialIcon = {
     width: "30px",
     height: "30px",
@@ -115,7 +113,6 @@ const downloadIcon = {
         textAlign: "center"
     }
 
-
     const anchorDownloadStyles = {
         display: "inline-block",
         fontFamily: "OpenSans",
@@ -131,6 +128,8 @@ const downloadIcon = {
         textAlign: "center"
     }
 
+export const TextContactWithMe = () => {
+
     return (
     <group position={[-3.36, 1.1, -1.5]} rotation={[0, Math.PI / 2, 0]}>
         <group position={[-0.49, 0.1, 0]}>
@@ -143,7 +142,7 @@ const downloadIcon = {
         <Text {...defaultText} text={textWhatCanIDoo} position={[0, 0.7, 0]}/>
         </group>
 
-        <Html position={[-0.55, 0.07, 0]} scale={[0.1,0.1,0.1]} rotation={[0, 0, 0]} transform >
+        <Html position={[-0.55, 0.07, 0]} scale={[0.1, 0.1, 0.1]} rotation={[0, 0, 0]} transform >
             <ul>
                 <li style={liStyle}><i style={phoneIcon}/>+48 574 984 766</li>
                 <li style={liStyle}><i style={emailIcon}/>szymon.gonerko@gmail.com</li>
@@ -162,7 +161,5 @@ const downloadIcon = {
                 <i style={downloadIcon}/>Download CV
             </a>
         </Html>
-        
-
     </group>);
   }

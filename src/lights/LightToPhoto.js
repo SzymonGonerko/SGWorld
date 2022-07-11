@@ -1,6 +1,6 @@
 import { Vector3 } from 'three'
 import { useRef } from 'react'
-import {useFrame, useThree} from '@react-three/fiber'
+import {useFrame} from '@react-three/fiber'
 import {SpotLight} from '@react-three/drei'
 
 

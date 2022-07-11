@@ -3,7 +3,7 @@ import {Text} from "@react-three/drei";
 import OpenSans from "../fonts/OpenSans.ttf"
 import { Html } from "@react-three/drei";
 
-const textGreatPossibility = "It's only small room. Try to imagine that together we are building large airports, gardens, people and their stories...could you? We have such an opportunity ! Maybe you're thinking meh ... we can't connect our webside with this techologies. Every application wrote on React has such a possibility! In my opinion react and canvas look like great lovers. In addition, in the middle of the canvas you can create normal HTML tags like <a/> <div/> <p/> and many more... rotate, style them...whatever you want... We have access to all hook's and conditional rendering... just KISS and one example... press ESC (escape on your keyboard) and click the button…"
+const textGreatPossibility = "It's only small room. Try to imagine that together we are building large airports, gardens, people and their stories...could you? We have such an opportunity ! Maybe you're thinking meh ... we can't connect our webside with this techologies. Every application wrote on React has such a possibility! In my opinion react and canvas look like great lovers. In addition, in the middle of the canvas you can create normal HTML tags... rotate, style them...whatever you want... We have access to all hook's and conditional rendering... just KISS and one example... press ESC (escape on your keyboard) and click the button…"
 
 export const TextGreatPossibility = () => {
 const [isClicked, setIsClicked] = useState(false)
@@ -62,7 +62,7 @@ const [isClicked, setIsClicked] = useState(false)
 
         <group position={[-0.1, -0.7, 0]}>
         <Text {...defaultText} text={textGreatPossibility} position={[0, 0.7, 0]}/>
-        {isClicked && <Text {...newText} text={"Are you see?"} position={[0.63, 0.32, 0]}/>}
+        {isClicked && <Text {...newText} text={"Are you see?"} position={[-0.1, 0.32, 0]}/>}
         </group>
 
         <Html position={[0.8, -0.6, 0]} scale={[0.1,0.1,0.1]} rotation={[0, 0, 0]} transform >

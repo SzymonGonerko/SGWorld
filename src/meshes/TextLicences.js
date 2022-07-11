@@ -2,10 +2,6 @@ import {Text} from "@react-three/drei";
 import OpenSans from "../fonts/OpenSans.ttf"
 import { Html } from "@react-three/drei"
 
-const textWhereAreWeInReality = "In a real sense, we are in my apartment in the center of Wroclaw. It's a prototype containing real objects, including myself. I wrote some of it, such as Book.js, and Paint.js. I am an author of the model of myself (WhiteBlackMe.js). Some are by other authors based on CC Attribution-ShareAlike license."
-const textWhereAreWeInVirtual = "In a virtual sense, we are inside <canvas/>. This is a fully semantic inline-block HTML tag for any web page (you can check it in inspector dev tools). This is a unique marker because it allows you to create a 2D or 3D space that can be freely manipulated."
-const textWhereAreWeContext = "In my previous project Vanilla-Date, I used 2D space. Now, I decided to go a step forward and use the maximum potential of 3D space."
-
 export const TextLicences = () => {
     const initialStyles = {
       fontSize: 0.13,
@@ -23,7 +19,7 @@ export const TextLicences = () => {
     }
 
     return (
-    <group position={[1.5, 1.5, 6.89]} rotation={[Math.PI, 0, Math.PI / 1]}>
+    <group position={[1.5, 1.5, 6.89]} rotation={[Math.PI, 0, Math.PI]}>
         <group position={[-1.21, -0.45, 0]}>
             <Text {...title} text={"LICENCES"} position={[0, 0.7, 0]}/>
         </group>

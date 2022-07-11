@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import * as THREE from "three";
 
 import { Html } from "@react-three/drei";
@@ -11,6 +11,67 @@ import enterIcon from "../icons/enter.svg"
 import arrowIcon from "../icons/arrow.svg"
 import pointerIcon from "../icons/pointer.svg"
 
+const anchorStyles = {
+  textDecoration: "none",
+  border: "1px solid black",
+  borderRadius: "10px",
+  padding: "10px",
+  fontFamily: "OpenSans",
+  backgroundColor: "transparent",
+  color: "black",
+  font: "arial",
+  transform: "translate(15%, 14%)",
+}
+const enterIconStyle = {
+  backgroundImage: `url(${enterIcon})`,
+  backgroundSize: "contain",
+  backgroundPosition: "center",
+  display: "inline-block",
+  fontSize: "0",
+  width: "15px",
+  height: "15px",
+  transform: "translate(15%, 11%)",
+  backgroundRepeat: "no-repeat"
+}
+const arrowIconStyle = {
+  ...enterIconStyle,
+  backgroundImage: `url(${arrowIcon})`,
+  transform: "translate(15%, 11%) rotate(50deg)",
+  marginRight: "4px"
+}
+
+const pointerIconStyle = {
+  ...enterIconStyle,
+  backgroundImage: `url(${pointerIcon})`,
+  marginRight: "4px"
+  
+}
+
+const initialStyles = {
+  fontSize: 0.13,
+  color: "black",
+  font: OpenSans,
+};
+const title = {
+    ...initialStyles,
+    fontSize: 0.21,
+    letterSpacing: 0.03
+}
+const defaultText = {
+    ...initialStyles,
+    fontSize: 0.06,
+    letterSpacing: 0.07,
+    maxWidth: 0.6
+}
+const firstInstruction = {
+  ...initialStyles,
+  fontSize: 0.04,
+  letterSpacing: 0.01,
+  lineHeight: 1, 
+  maxWidth: 0.5,
+  textAlign: "left"
+}
+
 const describeVanilla = "The mobile dating application, fully functional, written in the React library, styled with JSS and with the use of Material-UI. The project uses: 2D canvas, class objects and basic hooks (useState, useRef, useEffect, useClasses, useHistory). While writing the project, I learned how..."
 const describeVanilla2 = "... to use asynhronic functions and deal with the problem of server queries. App include a real-time Chat. The application is placed on a Google server (Firebase) with user authentication and backend support. Design inspired by the movie The 'Shape of Water' dir. Guillermo del Toro."
 
@@ -22,73 +83,11 @@ export const VanillaDate = () => {
       vid.crossOrigin = "Anonymous";
       vid.loop = true;
       vid.muted = true;
-      vid.play();
       return vid;
     });
 
-    const anchorStyles = {
-      textDecoration: "none",
-      border: "1px solid black",
-      borderRadius: "10px",
-      padding: "10px",
-      fontFamily: "OpenSans",
-      backgroundColor: "transparent",
-      color: "black",
-      font: "arial",
-      transform: "translate(15%, 14%)",
-    }
-    const enterIconStyle = {
-      backgroundImage: `url(${enterIcon})`,
-      backgroundSize: "contain",
-      backgroundPosition: "center",
-      display: "inline-block",
-      fontSize: "0",
-      width: "15px",
-      height: "15px",
-      transform: "translate(15%, 11%)",
-      backgroundRepeat: "no-repeat"
-    }
-    const arrowIconStyle = {
-      ...enterIconStyle,
-      backgroundImage: `url(${arrowIcon})`,
-      transform: "translate(15%, 11%) rotate(50deg)",
-      marginRight: "4px"
-    }
-
-    const pointerIconStyle = {
-      ...enterIconStyle,
-      backgroundImage: `url(${pointerIcon})`,
-      marginRight: "4px"
-      
-    }
-
-    const initialStyles = {
-      fontSize: 0.13,
-      color: "black",
-      font: OpenSans,
-    };
-    const title = {
-        ...initialStyles,
-        fontSize: 0.21,
-        letterSpacing: 0.03
-    }
-    const defaultText = {
-        ...initialStyles,
-        fontSize: 0.06,
-        letterSpacing: 0.07,
-        maxWidth: 0.6
-    }
-    const firstInstruction = {
-      ...initialStyles,
-      fontSize: 0.04,
-      letterSpacing: 0.01,
-      lineHeight: 1, 
-      maxWidth: 0.5,
-      textAlign: "left"
-  }
-
-
-  
+    useEffect(() => video.play(), [video])
+    
     return (
       <group position={[3.36, 1.1, -11]}>
 
@@ -103,7 +102,7 @@ export const VanillaDate = () => {
             <p style={{display: "inline-block", fontFamily: "OpenSans"}}>Click the button</p> 
         </Html>
 
-        <Html position={[0, 0.8, 0]} scale={[0.12,0.1,0.1]} rotation={[0, 0, 0]} transform >
+        <Html position={[0, 0.8, 0]} scale={[0.12, 0.1, 0.1]} rotation={[0, 0, 0]} transform >
           <a style={anchorStyles} href="https://vanilla-date.netlify.app/" target="_blank">
             <p style={{display: "inline-block", transform: "translate(-2%, -3%)"}}>Enter Vanilla-Date</p> 
             <i style={enterIconStyle}/>

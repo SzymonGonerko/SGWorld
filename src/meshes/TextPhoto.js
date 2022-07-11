@@ -15,7 +15,7 @@ export const TextPhoto = () => {
 
 
     return (
-    <group position={[-0.55, 0.89, 6.89]} rotation={[Math.PI, 0, Math.PI / 1]}>
+    <group position={[-0.55, 0.89, 6.89]} rotation={[Math.PI, 0, Math.PI]}>
         <Text {...title} text={' on the right hand - kalimba, on the table laptop and "The Book Thief"'} position={[0, 0.7, 0]}/>
     </group>);
   }

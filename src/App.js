@@ -1,4 +1,4 @@
-import React, {useState, useEffect, Suspense} from "react";
+import React, {Suspense} from "react";
 import { Canvas } from "@react-three/fiber"
 import { Stars, PointerLockControls } from "@react-three/drei"
 import { Physics } from "@react-three/cannon"
@@ -28,6 +28,8 @@ import { TextSGWorld } from "./meshes/TextSGWorld"
 import { TextLightGarden } from "./meshes/TextLightGarden"
 import { FancyMesh } from "./meshes/FancyMesh"
 import { TextPhoto } from "./meshes/TextPhoto";
+import { SunsetTypes } from "./meshes/SunsetTypes";
+import { LightToSunset } from "./lights/LightToSunset";
 
 
 import LightToPhoto from "./lights/LightToPhoto";
@@ -107,7 +109,8 @@ export default function App() {
         <LightToSkills/>
         <TextSkills />
 
-
+        <LightToSunset/>
+        <SunsetTypes/>
 
         
         <Ceiling position={[0, 2.6, -3]} type={"Static"}/>

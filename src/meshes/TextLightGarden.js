@@ -1,7 +1,6 @@
-import React, {useState, useRef} from "react";
+import React from "react";
 import { Html } from "@react-three/drei";
 import OpenSans from "../fonts/OpenSans.ttf"
-import pointerIcon from "../icons/pointer.svg"
 
 import {Text} from "@react-three/drei";
 

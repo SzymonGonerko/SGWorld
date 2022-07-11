@@ -37,7 +37,9 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: rgb(193, 193, 193);
+  background-image: url(./screenShot/SGWorldBack.jpg);
+  background-position: center;
+  background-size: cover;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -53,7 +55,6 @@ body,
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-
     width: 100vw;
     height: 100vh;
   }
@@ -66,7 +67,8 @@ body,
     justify-content: center;
     height: 30%;
     width: 60%;
-    background-color: #0A3A40;
+    background-color: #1C4C75;
+    opacity: 0.9;
     border-radius: 2vh;
     color: white;
     border-bottom: 2px solid black;
@@ -96,16 +98,17 @@ body,
     align-items: center;
     justify-content: center;
     width: 65%;
-    font-size: 2.8vh;
+    font-size: 2.5vh;
     height: 35%;
-    background-color: #1D7373;
+    background-color: #2F7FC4;
+    opacity: 0.9;
     border-radius: 2vh;
     padding: 2vh;
     color: white;
   }
 
   .mainContent .mobileVersion i.iconDesktop {
-    background-image: url(./icons/desktopWhite.svg);
+    background-image: url(./icons/desktop.jpg);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -151,7 +154,8 @@ body,
     align-items: center;
     height: 15%;
     width: 100%;
-    background-color: #0A3A40;
+    background-color: #1C4C75;
+    opacity: 0.9;
     color: white;
     border-bottom: 2px solid black;
     box-shadow: 8px 8px 24px -16px rgba(0, 0, 0, 1);
@@ -211,7 +215,7 @@ body,
     font-weight: normal;
     font-size: 5vh;
     border: 2px solid black;
-    background-color: white;
+    background-color: #85C2F7;
     line-height: 100%;
     text-align: center;
     overflow: hidden;
@@ -223,7 +227,7 @@ body,
   
   .mainContent .secContainer .btnEnter:hover {
     transform: scale(1.03);
-    box-shadow: 4px 5px 67px 14px rgb(255, 255, 255);
+    box-shadow: 8px 0px 100px -8px rgba(255, 255, 255, 1);
   }
   .mainContent .secContainer .btnEnter i.enterIcon {
     position: absolute;
@@ -247,8 +251,9 @@ body,
   }
 
   .mainContent .firstContainer .welcome {
-    background-color: #0F5959;
+    background-color: #2F7FC4;
     color: white;
+    opacity: 0.8;
     padding: 2vh;
     border-radius: 1vh;
     width: 80%;
@@ -262,13 +267,14 @@ body,
   }
   .mainContent .firstContainer .welcome p {
     font-weight: normal;
-    font-size: 3vh;
+    font-size: 2.8vh;
   }
   
   .mainContent .firstContainer .controls {
-    background-color: #1D7373;
+    background-color: #3B9FF5;
     display: flex;
     flex-direction: column;
+    opacity: 0.8;
     justify-content: space-between;
     color: white;
     padding: 2vh;
@@ -319,4 +325,3 @@ body,
     width: 100vw;
   }
 }
-

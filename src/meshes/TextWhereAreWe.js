@@ -1,29 +1,32 @@
 import {Text} from "@react-three/drei";
 import OpenSans from "../fonts/OpenSans.ttf"
 
-const textWhereAreWeInReality = "In a real sense, we are in my apartment in the center of Wroclaw. It's a prototype containing real objects, including myself. I am an author of Paint.js and the model of myself (WhiteBlackMe.js). Some are by other authors based on CC Attribution-ShareAlike license."
-const textWhereAreWeInVirtual = "In a virtual sense, we are inside <canvas/>. This is a fully semantic inline-block HTML tag for any web page (you can check it in inspector dev tools). This is a unique marker because it allows you to create a 2D or 3D space that can be freely manipulated."
-const textWhereAreWeContext = "In my previous project Vanilla-Date, I used 2D space. Now, I decided to go a step forward and use the maximum potential of 3D space."
+const textWhereAreWeInReality = "In a real sense, we are in my apartment in the center of Wroclaw. It's prototype containing real objects, including myself. I am an author of Paint and the model of myself. Other objects based on CC Attribution-ShareAlike license."
+const textWhereAreWeInVirtual = "In a virtual sense, we are inside canvas. This is normal HTML tag for every web page. This is a unique marker because it allows you to create a 2D or 3D space that can be freely manipulated."
+const textWhereAreWeContext = "In my previous project Vanilla-Date, I used 2D space. Now, I decided to go step forward and use the maximum potential of 3D space."
+
+const initialStyles = {
+    fontSize: 0.13,
+    color: "black",
+    font: OpenSans,
+  };
+  const title = {
+      ...initialStyles,
+      fontSize: 0.21
+  }
+  const verticalTitle = {
+      ...initialStyles,
+      fontSize: 0.3
+  }
+  const defaultText = {
+      ...initialStyles,
+      fontSize: 0.08,
+      letterSpacing: 0.07,
+  }
+
+
 
 export const TextWhereAreWe = () => {
-    const initialStyles = {
-      fontSize: 0.13,
-      color: "black",
-      font: OpenSans,
-    };
-    const title = {
-        ...initialStyles,
-        fontSize: 0.21
-    }
-    const verticalTitle = {
-        ...initialStyles,
-        fontSize: 0.3
-    }
-    const defaultText = {
-        ...initialStyles,
-        fontSize: 0.08,
-        letterSpacing: 0.07,
-    }
 
     return (
     <group position={[3.36, 1.5, 4.6]} rotation={[0, -Math.PI / 2, 0]}>
@@ -35,8 +38,8 @@ export const TextWhereAreWe = () => {
 
         <group position={[0, 0, 0]}>
         <Text {...defaultText} maxWidth={2.5} text={textWhereAreWeInReality} position={[0, 0, 0]}/>
-        <Text {...defaultText} maxWidth={2.5} text={textWhereAreWeInVirtual} position={[0, -0.5, 0]}/>
-        <Text {...defaultText} maxWidth={2.5} text={textWhereAreWeContext} position={[0, -0.9, 0]}/>
+        <Text {...defaultText} maxWidth={2.5} text={textWhereAreWeInVirtual} position={[0, -0.4, 0]}/>
+        <Text {...defaultText} maxWidth={2.5} text={textWhereAreWeContext} position={[0, -0.75, 0]}/>
         </group>
 
     </group>);

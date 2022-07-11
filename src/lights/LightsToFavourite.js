@@ -1,6 +1,6 @@
 import { Vector3 } from 'three'
 import { useRef } from 'react'
-import {useFrame, useThree} from '@react-three/fiber'
+import {useFrame} from '@react-three/fiber'
 import {SpotLight} from '@react-three/drei'
 
 
@@ -8,13 +8,13 @@ import {SpotLight} from '@react-three/drei'
 const LightsToFavourite = ({ vec = new Vector3() }) => {
     const LightToFav = useRef()
     useFrame(() => {
-      LightToFav.current.target.position.lerp(vec.set(-3, 1.35, -8.7), 0.1)
+      LightToFav.current.target.position.lerp(vec.set(-3, 1.35, -6.7), 0.1)
       LightToFav.current.target.updateMatrixWorld()
 
     })
     return (
-    <group position={[0, 1.4, -3.8]}>
-      <SpotLight position={[0, 0, 0]} ref={LightToFav} penumbra={0.5} distance={10} angle={0.22} attenuation={0} anglePower={0} intensity={0.7} />
+    <group position={[0, 1.4, -1.8]}>
+      <SpotLight ref={LightToFav} penumbra={0.5} distance={10} angle={0.22} attenuation={0} anglePower={0} intensity={0.7} />
     </group>)
 
   }
