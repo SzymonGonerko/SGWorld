@@ -13,7 +13,7 @@
 
 https://sgworld.netlify.app/
 
-![SGWorld]()
+![SGWorld](https://github.com/SzymonGonerko/SGWorld/blob/cbc495ebcdf82270667e2c498928eef371f8b38a/src/screenShot/SGWorld.jpg)
 
 
 This is my complex React project. In my previous app Vanilla-Date, I used 2D space. Now, I decided to go a step forward and use the maximum potential of 3D space. The main idea behind the project was to present my living space and the latest Vanilla-Date project. In the project, I used 3 React sub-libraries. React Cannon supports object physics. React Drei and React Fiber support HTML appearance and markup. I am the author of myself and the Paint.js object.
@@ -21,13 +21,13 @@ This is my complex React project. In my previous app Vanilla-Date, I used 2D spa
 
 # Technologies&Ecosystems
 
-![NPM]()
+![NPM](https://github.com/SzymonGonerko/SGWorld/blob/cbc495ebcdf82270667e2c498928eef371f8b38a/src/screenShot/NPMList.jpg)
 
 
 The official sub repository of React/Three/Fiber (https://github.com/pmndrs/react-three-fiber) has identified the ecosystems to support Three.js as complete toolkits. 
 I decided to use three of them.
 
-![toolkits]()
+![toolkits](https://github.com/SzymonGonerko/SGWorld/blob/cbc495ebcdf82270667e2c498928eef371f8b38a/src/screenShot/Toolkits.jpg)
 
 ## React_Three_Cannon
 
@@ -64,5 +64,5 @@ npx gltfjsx <name>.glb
 ``
 
 
-![blender]()
+![blender](https://github.com/SzymonGonerko/SGWorld/blob/cbc495ebcdf82270667e2c498928eef371f8b38a/src/screenShot/blender.jpg)
 
